@@ -35,7 +35,7 @@
 		45494C2B1A6F4F2800859DDF /* SourceLocation+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440981A6F380900242EA3 /* SourceLocation+Printable.swift */; };
 		45494C2C1A6F4F2800859DDF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D03911A6EB12A00F88F4E /* String.swift */; };
 		45494C2D1A6F4F2800859DDF /* CCharArrayOfCCharArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */; };
-		45494C301A6F51DE00859DDF /* Sample2.cpp in Resources */ = {isa = PBXBuildFile; fileRef = 45494C2E1A6F51CA00859DDF /* Sample2.cpp */; };
+		45494C301A6F51DE00859DDF /* Sample2.h in Resources */ = {isa = PBXBuildFile; fileRef = 45494C2E1A6F51CA00859DDF /* Sample2.h */; };
 		455E98011A6F4A2E00D38FF9 /* SBThread.h in Resources */ = {isa = PBXBuildFile; fileRef = 455E98001A6F4A1E00D38FF9 /* SBThread.h */; };
 		459E8F8C1A6E92A100EF8DCE /* ClangWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -102,7 +102,7 @@
 		452D038D1A6EAC6C00F88F4E /* CursorKind+Aliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CursorKind+Aliases.swift"; sourceTree = "<group>"; };
 		452D03911A6EB12A00F88F4E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		452D03931A6EB26900F88F4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		45494C2E1A6F51CA00859DDF /* Sample2.cpp */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = Sample2.cpp; sourceTree = "<group>"; };
+		45494C2E1A6F51CA00859DDF /* Sample2.h */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = Sample2.h; sourceTree = "<group>"; };
 		455E97761A6F3D2700D38FF9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		455E98001A6F4A1E00D38FF9 /* SBThread.h */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = SBThread.h; sourceTree = "<group>"; };
 		455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCharArrayOfCCharArray.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 			children = (
 				4505E5D21A6F25E600C555A6 /* AppDelegate.swift */,
 				4514409A1A6F38F700242EA3 /* Sample.c */,
-				45494C2E1A6F51CA00859DDF /* Sample2.cpp */,
+				45494C2E1A6F51CA00859DDF /* Sample2.h */,
 				455E98001A6F4A1E00D38FF9 /* SBThread.h */,
 				4505E5D41A6F25E600C555A6 /* Images.xcassets */,
 				4505E5D61A6F25E600C555A6 /* MainMenu.xib */,
@@ -351,7 +351,7 @@
 				4505E5D51A6F25E600C555A6 /* Images.xcassets in Resources */,
 				4505E5D81A6F25E600C555A6 /* MainMenu.xib in Resources */,
 				4514409B1A6F38F700242EA3 /* Sample.c in Resources */,
-				45494C301A6F51DE00859DDF /* Sample2.cpp in Resources */,
+				45494C301A6F51DE00859DDF /* Sample2.h in Resources */,
 				455E98011A6F4A2E00D38FF9 /* SBThread.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

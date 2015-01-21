@@ -20,22 +20,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			f()
 		}
 		
-//		run {
-//			let	path		=	NSBundle.mainBundle().pathForResource("Sample", ofType: "c")!
-//			
-//			let	idx			=	Index(excludeDeclarationsFromPCH: false, displayDiagnostics: false)
-//			let	transunit	=	idx.parseTranslationUnit(path)
-//			
-//			transunit.diagnostics.map { (d:Diagnostic)->() in
-//				println(d.spelling)
-//			}
-//			
-//			println(transunit.cursor.description)
-//		}
+		run {
+			let	path		=	NSBundle.mainBundle().pathForResource("Sample", ofType: "c")!
+			
+			let	idx			=	Index(excludeDeclarationsFromPCH: false, displayDiagnostics: false)
+			let	transunit	=	idx.parseTranslationUnit(path)
+			
+			transunit.diagnostics.map { (d:Diagnostic)->() in
+				println(d.spelling)
+			}
+			
+			println(transunit.cursor.description)
+		}
 		
 		run {
-//			let	path		=	NSBundle.mainBundle().pathForResource("Sample2", ofType: "cpp")!
-			let	path		=	NSBundle.mainBundle().pathForResource("SBThread", ofType: "h")!
+			let	path		=	NSBundle.mainBundle().pathForResource("Sample2", ofType: "h")!
 			
 			let	idx			=	Index(excludeDeclarationsFromPCH: false, displayDiagnostics: false)
 			let	transunit	=	idx.parseTranslationUnit(path, commandLineArguments: ["-std=c++11"])
