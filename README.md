@@ -53,7 +53,9 @@ Some points.
 	As this wrapper models C API as is, the text should help a lot.
 
 
+If you want to force specific language mode, use this method.
 
+	let	transunit	=	idx.parseTranslationUnit(path, commandLineArguments: ["-std=c++11"])
 
 
 
