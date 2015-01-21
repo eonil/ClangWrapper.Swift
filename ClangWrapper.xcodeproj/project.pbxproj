@@ -54,6 +54,7 @@
 		4576193E1A6FA992004479B6 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193D1A6FA992004479B6 /* Diagnostic.swift */; };
 		457619401A6FA9A0004479B6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193F1A6FA9A0004479B6 /* File.swift */; };
 		459E8F8C1A6E92A100EF8DCE /* ClangWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45A6514F1A6FC86E007B9841 /* Cursor+SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A6514E1A6FC86E007B9841 /* Cursor+SourceCode.swift */; };
 		45C7054F1A6F660800CA4E7B /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7054E1A6F660800CA4E7B /* Type.swift */; };
 		45C705511A6F66D300CA4E7B /* TypeKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705501A6F66D300CA4E7B /* TypeKind.swift */; };
 		45C705531A6F684700CA4E7B /* TypeKind+Stringification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */; };
@@ -145,6 +146,7 @@
 		459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459E8F8A1A6E92A100EF8DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClangWrapper.h; sourceTree = "<group>"; };
+		45A6514E1A6FC86E007B9841 /* Cursor+SourceCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+SourceCode.swift"; sourceTree = "<group>"; };
 		45C7054E1A6F660800CA4E7B /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		45C705501A6F66D300CA4E7B /* TypeKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeKind.swift; sourceTree = "<group>"; };
 		45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TypeKind+Stringification.swift"; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */,
 				456FAFD81A6F9B69002FA16C /* RemotePointerTracker.swift */,
 				456FAFDC1A6FA435002FA16C /* Debug.swift */,
+				45A6514E1A6FC86E007B9841 /* Cursor+SourceCode.swift */,
 				459E8F891A6E92A100EF8DCE /* Supporting Files */,
 			);
 			path = ClangWrapper;
@@ -434,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A6514F1A6FC86E007B9841 /* Cursor+SourceCode.swift in Sources */,
 				456A0FAD1A6F7F9800A1DF5B /* Cursor+Query.swift in Sources */,
 				45494C2A1A6F4F2800859DDF /* SourceLocation.swift in Sources */,
 				45C705511A6F66D300CA4E7B /* TypeKind.swift in Sources */,

@@ -13,7 +13,7 @@ public extension Cursor {
 		get {
 			let	extras	=	getExtras(self)
 			let	extras1	=	extras == nil ? "" : ", \(extras!)"
-			return	"\(kind):\(type.kind), [\(spelling)](\(extent))\(extras1)"
+			return	"\(kind):\(type), [\(spelling)](\(extent))\(extras1)"
 		}
 	}
 }
@@ -25,6 +25,12 @@ private func getExtras(c:Cursor) -> String? {
 	}
 	switch c.kind {
 	case .CXXAccessSpecifier:	return	"CXXAccessSpecifier = \(c.CXXAccessSpecifier.description)"
+	case .EnumDecl:				return	"underlying type = \(c.enumDeclarationIntegerType)"
+	case .EnumConstantDecl:		return	"constant value = \(c.enumConstantDeclarationValue), constant unsigned value = \(c.enumConstantDeclarationUnsignedValue)"
+//	case .CXXMethod:
+//		let	a	=	c.argumentCursors.map({ x in x.spelling })
+//		let	b	=	join(", ", a)
+//		return	"(\(b)) -> \(c.resultType)"
 	default:					return	nil
 	}
 }

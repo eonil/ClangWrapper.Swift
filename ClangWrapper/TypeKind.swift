@@ -115,6 +115,15 @@ public extension TypeKind {
 	}
 }
 
+extension TypeKind {
+	public var spelling:String {
+		get {
+			let	s	=	clang_getTypeKindSpelling(raw)
+			let	s1	=	toSwiftString(s, true)
+			return	s1
+		}
+	}
+}
 
 
 

@@ -32,9 +32,39 @@ public struct Cursor {
 	public var type:Type {
 		get {
 			let	r	=	clang_getCursorType(raw)
-			return	Type(raw: r)
+			return	Type(index: index, raw: r)
 		}
 	}
+	public var enumDeclarationIntegerType:Type {
+		get {
+			let	r	=	clang_getEnumDeclIntegerType(raw)
+			return	Type(index: index, raw: r)
+		}
+	}
+	public var enumConstantDeclarationValue:Int64 {
+		get {
+			return	clang_getEnumConstantDeclValue(raw)
+		}
+	}
+	public var enumConstantDeclarationUnsignedValue:UInt64 {
+		get {
+			return	clang_getEnumConstantDeclUnsignedValue(raw)
+		}
+	}
+	public var argumentCursors:[Cursor] {
+		get {
+			let	mk	=	{ i in Cursor(index: self.index, raw: clang_Cursor_getArgument(self.raw, i)) }
+			let	n	=	UInt32(clang_Cursor_getNumArguments(raw))
+			return	(0..<n).map(mk)
+		}
+	}
+	public var resultType:Type {
+		get {
+			let	r	=	clang_getCursorResultType(raw)
+			return	Type(index: index, raw: r)
+		}
+	}
+	
 	public var extent:SourceRange {
 		get {
 			let	r	=	clang_getCursorExtent(raw);

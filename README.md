@@ -96,7 +96,7 @@ Design Choices
 --------------
 -	All strings are passed by copy. Performance can be decreased.
 -	An extra method like `stringBuffer` can be added later for efficiency.
--	`Index` class serves as local proxy root controller. It manages all the proxy objects connected over C API.
+-	`Index` class serves as local proxy root container. It manages all the proxy objects connected over C API.
 	You have to keep a reference to `Index` object to keep any of its object.
 -	Uses C-like tree (unique-ownership) manual resource management. That means you need to call `dispose` 
 	manually on them to free up allocated resources. If an object does not support `dispose`, it means it does 
@@ -112,7 +112,7 @@ Design Choices
 References
 ----------
 
--	[Awesome introduction by Mike Ash](https://www.mikeash.com/pyblog/friday-qa-2014-01-24-introduction-to-libclang.html).
+-	[Awesome introduction to `libclang` C API by Mike Ash](https://www.mikeash.com/pyblog/friday-qa-2014-01-24-introduction-to-libclang.html).
 
 
 

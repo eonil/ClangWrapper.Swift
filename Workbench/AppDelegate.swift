@@ -52,22 +52,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			
 			let	idx			=	Index(excludeDeclarationsFromPCH: false, displayDiagnostics: false)
 			let	transunit	=	idx.parseTranslationUnit(path, commandLineArguments: ["-std=c++11"])
-			
-			let	c			=	transunit.cursor
-			
-			struct Util {
-				static func query(c:Cursor, depth:Int) {
-					let	indent	=	join("", Repeat(count: depth, repeatedValue: "  "))
-					let	extra	=	c.spelling == "" ? " " + c.sourceCode : ""
-					println("\(indent)\(c.kind) [\(c.spelling)]\(extra)")
 
-					for c1 in c.children {
-						Util.query(c1, depth: depth+1)
-					}
-				}
-			}
+			println(transunit)
 			
-			Util.query(c, depth: 0)
+//			let	c			=	transunit.cursor
+//			
+//			struct Util {
+//				static func query(c:Cursor, depth:Int) {
+//					let	indent	=	join("", Repeat(count: depth, repeatedValue: "  "))
+//					let	extra	=	c.spelling == "" ? " " + c.sourceCode : ""
+//					println("\(indent)\(c.kind) [\(c.spelling)]\(extra)")
+//
+//					for c1 in c.children {
+//						Util.query(c1, depth: depth+1)
+//					}
+//				}
+//			}
+//			
+//			Util.query(c, depth: 0)
 		}
 	}
 
