@@ -32,6 +32,16 @@ public final class Index {
 		}
 		return	TranslationUnit(raw: tuptr)
 	}
+	public func parseTranslationUnit(sourceFilename:String, commandLineArguments:[String]) -> TranslationUnit {
+		var	tuptr	=	CXTranslationUnit()
+		withCPointerToNullTerminatingCArrayOfCStrings(commandLineArguments, { (pArgs:UnsafePointer<UnsafeMutablePointer<Int8>>) -> () in
+			let	pArgs1	=	UnsafePointer<UnsafePointer<Int8>>(pArgs)
+			tuptr	=	sourceFilename.withCString { (pFilename:UnsafePointer<Int8>) -> CXTranslationUnit in
+				return	clang_parseTranslationUnit(self._raw, pFilename, pArgs1, Int32(commandLineArguments.count), nil, 0, 0)
+			}
+		})
+		return	TranslationUnit(raw: tuptr)
+	}
 	
 	////
 	

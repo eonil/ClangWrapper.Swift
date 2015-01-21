@@ -8,44 +8,44 @@
 
 import Foundation
 
-extension CursorKind {
+public extension CursorKind {
 //	case FirstDecl                     = UnexposedDecl,
-	static var FirstDecl:CursorKind {
+	public static var FirstDecl:CursorKind {
 		get {
 			return	UnexposedDecl
 		}
 	}
 	
 //	case LastDecl                      = CXXAccessSpecifier,
-	static var LastDecl:CursorKind {
+	public static var LastDecl:CursorKind {
 		get {
 			return	CXXAccessSpecifier
 		}
 	}
 	
 //	case ObjCSuperClassRef             = 40
-	static var ObjCSuperClassRef:CursorKind {
+	public static var ObjCSuperClassRef:CursorKind {
 		get {
 			return	CursorKind(rawValue: 40)!
 		}
 	}
 	
 //	case LastRef                       = VariableRef,
-	static var LastRef:CursorKind {
+	public static var LastRef:CursorKind {
 		get {
 			return	VariableRef
 		}
 	}
 	
 //	case InvalidFile                   = 70
-	static var InvalidFile:CursorKind {
+	public static var InvalidFile:CursorKind {
 		get {
 			return	CursorKind(rawValue: 70)!
 		}
 	}
 	
 //	case LastInvalid                   = InvalidCode,
-	static var LastInvalid:CursorKind {
+	public static var LastInvalid:CursorKind {
 		get {
 			return	InvalidCode
 		}
@@ -62,7 +62,7 @@ extension CursorKind {
 //	* expression is not reported.
 //	*/
 //	case UnexposedExpr                 = 100
-	static var UnexposedExpr:CursorKind {
+	public static var UnexposedExpr:CursorKind {
 		get {
 			return	CursorKind(rawValue: 100)!
 		}
@@ -70,7 +70,7 @@ extension CursorKind {
 	
 //	
 //	case LastExpr                      = ObjCSelfExpr,
-	static var LastExpr:CursorKind {
+	public static var LastExpr:CursorKind {
 		get {
 			return	ObjCSelfExpr
 		}
@@ -88,7 +88,7 @@ extension CursorKind {
 //	* reported.
 //	*/
 //	case UnexposedStmt                 = 200
-	static var UnexposedStmt:CursorKind {
+	public static var UnexposedStmt:CursorKind {
 		get {
 			return	CursorKind(rawValue: 200)!
 		}
@@ -96,7 +96,7 @@ extension CursorKind {
 	
 //	
 //	case AsmStmt                       = GCCAsmStmt,
-	static var AsmStmt:CursorKind {
+	public static var AsmStmt:CursorKind {
 		get {
 			return	GCCAsmStmt
 		}
@@ -104,7 +104,7 @@ extension CursorKind {
 	
 //	
 //	case LastStmt                      = OMPTeamsDirective,
-	static var LastStmt:CursorKind {
+	public static var LastStmt:CursorKind {
 		get {
 			return	OMPTeamsDirective
 		}
@@ -116,7 +116,7 @@ extension CursorKind {
 //	* interface.
 //	*/
 //	case UnexposedAttr                 = 400
-	static var UnexposedAttr:CursorKind {
+	public static var UnexposedAttr:CursorKind {
 		get {
 			return	CursorKind(rawValue: 400)!
 		}
@@ -124,7 +124,7 @@ extension CursorKind {
 	
 //	
 //	case LastAttr                      = CUDASharedAttr,
-	static var LastAttr:CursorKind {
+	public static var LastAttr:CursorKind {
 		get {
 			return	CUDASharedAttr
 		}
@@ -133,7 +133,7 @@ extension CursorKind {
 	
 //	
 //	case MacroInstantiation            = MacroExpansion,
-	static var MacroInstantiation:CursorKind {
+	public static var MacroInstantiation:CursorKind {
 		get {
 			return	MacroExpansion
 		}
@@ -142,7 +142,7 @@ extension CursorKind {
 	
 //	
 //	case FirstPreprocessing            = PreprocessingDirective,
-	static var FirstPreprocessing:CursorKind {
+	public static var FirstPreprocessing:CursorKind {
 		get {
 			return	PreprocessingDirective
 		}
@@ -150,7 +150,7 @@ extension CursorKind {
 	
 	
 //	case LastPreprocessing             = InclusionDirective,
-	static var LastPreprocessing:CursorKind {
+	public static var LastPreprocessing:CursorKind {
 		get {
 			return	InclusionDirective
 		}
@@ -159,7 +159,7 @@ extension CursorKind {
 	
 //	
 //	case FirstExtraDecl                = ModuleImportDecl,
-	static var FirstExtraDecl:CursorKind {
+	public static var FirstExtraDecl:CursorKind {
 		get {
 			return	ModuleImportDecl
 		}
@@ -167,7 +167,7 @@ extension CursorKind {
 	
 	
 //	case LastExtraDecl                 = ModuleImportDecl
-	static var LastExtraDecl:CursorKind {
+	public static var LastExtraDecl:CursorKind {
 		get {
 			return	ModuleImportDecl
 		}

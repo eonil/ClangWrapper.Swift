@@ -14,13 +14,6 @@
 		4505E5EC1A6F25FB00C555A6 /* ClangWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; };
 		4505E5EF1A6F260700C555A6 /* ClangWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; };
 		4505E5F01A6F260700C555A6 /* ClangWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4514408B1A6F2A8F00242EA3 /* ChildVisitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408A1A6F2A8F00242EA3 /* ChildVisitResult.swift */; };
-		4514408D1A6F2D8C00242EA3 /* CursorKind+Stringification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408C1A6F2D8C00242EA3 /* CursorKind+Stringification.swift */; };
-		4514408F1A6F351100242EA3 /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408E1A6F351100242EA3 /* Cursor.swift */; };
-		451440911A6F351D00242EA3 /* Cursor+Iteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440901A6F351D00242EA3 /* Cursor+Iteration.swift */; };
-		451440931A6F36B300242EA3 /* Cursor+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440921A6F36B300242EA3 /* Cursor+Printable.swift */; };
-		451440971A6F37D900242EA3 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440961A6F37D900242EA3 /* SourceLocation.swift */; };
-		451440991A6F380900242EA3 /* SourceLocation+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440981A6F380900242EA3 /* SourceLocation+Printable.swift */; };
 		4514409B1A6F38F700242EA3 /* Sample.c in Resources */ = {isa = PBXBuildFile; fileRef = 4514409A1A6F38F700242EA3 /* Sample.c */; };
 		452D032E1A6E9CB900F88F4E /* BuildSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03271A6E9CB900F88F4E /* BuildSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D032F1A6E9CB900F88F4E /* CXCompilationDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,11 +23,21 @@
 		452D03331A6E9CB900F88F4E /* Index.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032C1A6E9CB900F88F4E /* Index.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D03341A6E9CB900F88F4E /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032D1A6E9CB900F88F4E /* Platform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D03871A6EA01F00F88F4E /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D03861A6EA01F00F88F4E /* libclang.dylib */; };
-		452D038C1A6EAB5000F88F4E /* CursorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D038B1A6EAB5000F88F4E /* CursorKind.swift */; };
-		452D038E1A6EAC6C00F88F4E /* CursorKind+Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D038D1A6EAC6C00F88F4E /* CursorKind+Aliases.swift */; };
-		452D03921A6EB12A00F88F4E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D03911A6EB12A00F88F4E /* String.swift */; };
+		45494C221A6F4F2800859DDF /* ClangWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E8FA01A6E92B500EF8DCE /* ClangWrapper.swift */; };
+		45494C231A6F4F2800859DDF /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408E1A6F351100242EA3 /* Cursor.swift */; };
+		45494C241A6F4F2800859DDF /* Cursor+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440921A6F36B300242EA3 /* Cursor+Printable.swift */; };
+		45494C251A6F4F2800859DDF /* Cursor+Iteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440901A6F351D00242EA3 /* Cursor+Iteration.swift */; };
+		45494C261A6F4F2800859DDF /* CursorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D038B1A6EAB5000F88F4E /* CursorKind.swift */; };
+		45494C271A6F4F2800859DDF /* CursorKind+Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D038D1A6EAC6C00F88F4E /* CursorKind+Aliases.swift */; };
+		45494C281A6F4F2800859DDF /* CursorKind+Stringification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408C1A6F2D8C00242EA3 /* CursorKind+Stringification.swift */; };
+		45494C291A6F4F2800859DDF /* ChildVisitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408A1A6F2A8F00242EA3 /* ChildVisitResult.swift */; };
+		45494C2A1A6F4F2800859DDF /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440961A6F37D900242EA3 /* SourceLocation.swift */; };
+		45494C2B1A6F4F2800859DDF /* SourceLocation+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440981A6F380900242EA3 /* SourceLocation+Printable.swift */; };
+		45494C2C1A6F4F2800859DDF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D03911A6EB12A00F88F4E /* String.swift */; };
+		45494C2D1A6F4F2800859DDF /* CCharArrayOfCCharArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */; };
+		45494C301A6F51DE00859DDF /* Sample2.cpp in Resources */ = {isa = PBXBuildFile; fileRef = 45494C2E1A6F51CA00859DDF /* Sample2.cpp */; };
+		455E98011A6F4A2E00D38FF9 /* SBThread.h in Resources */ = {isa = PBXBuildFile; fileRef = 455E98001A6F4A1E00D38FF9 /* SBThread.h */; };
 		459E8F8C1A6E92A100EF8DCE /* ClangWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		459E8FA11A6E92B500EF8DCE /* ClangWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E8FA01A6E92B500EF8DCE /* ClangWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +102,10 @@
 		452D038D1A6EAC6C00F88F4E /* CursorKind+Aliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CursorKind+Aliases.swift"; sourceTree = "<group>"; };
 		452D03911A6EB12A00F88F4E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		452D03931A6EB26900F88F4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		45494C2E1A6F51CA00859DDF /* Sample2.cpp */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = Sample2.cpp; sourceTree = "<group>"; };
 		455E97761A6F3D2700D38FF9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		455E98001A6F4A1E00D38FF9 /* SBThread.h */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = SBThread.h; sourceTree = "<group>"; };
+		455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCharArrayOfCCharArray.swift; sourceTree = "<group>"; };
 		459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459E8F8A1A6E92A100EF8DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClangWrapper.h; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 			children = (
 				4505E5D21A6F25E600C555A6 /* AppDelegate.swift */,
 				4514409A1A6F38F700242EA3 /* Sample.c */,
+				45494C2E1A6F51CA00859DDF /* Sample2.cpp */,
+				455E98001A6F4A1E00D38FF9 /* SBThread.h */,
 				4505E5D41A6F25E600C555A6 /* Images.xcassets */,
 				4505E5D61A6F25E600C555A6 /* MainMenu.xib */,
 				4505E5D01A6F25E600C555A6 /* Supporting Files */,
@@ -226,6 +234,7 @@
 				451440961A6F37D900242EA3 /* SourceLocation.swift */,
 				451440981A6F380900242EA3 /* SourceLocation+Printable.swift */,
 				452D03911A6EB12A00F88F4E /* String.swift */,
+				455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */,
 				459E8F891A6E92A100EF8DCE /* Supporting Files */,
 			);
 			path = ClangWrapper;
@@ -342,6 +351,8 @@
 				4505E5D51A6F25E600C555A6 /* Images.xcassets in Resources */,
 				4505E5D81A6F25E600C555A6 /* MainMenu.xib in Resources */,
 				4514409B1A6F38F700242EA3 /* Sample.c in Resources */,
+				45494C301A6F51DE00859DDF /* Sample2.cpp in Resources */,
+				455E98011A6F4A2E00D38FF9 /* SBThread.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,17 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4514408D1A6F2D8C00242EA3 /* CursorKind+Stringification.swift in Sources */,
-				4514408B1A6F2A8F00242EA3 /* ChildVisitResult.swift in Sources */,
-				451440931A6F36B300242EA3 /* Cursor+Printable.swift in Sources */,
-				451440971A6F37D900242EA3 /* SourceLocation.swift in Sources */,
-				452D038E1A6EAC6C00F88F4E /* CursorKind+Aliases.swift in Sources */,
-				452D03921A6EB12A00F88F4E /* String.swift in Sources */,
-				4514408F1A6F351100242EA3 /* Cursor.swift in Sources */,
-				451440911A6F351D00242EA3 /* Cursor+Iteration.swift in Sources */,
-				459E8FA11A6E92B500EF8DCE /* ClangWrapper.swift in Sources */,
-				452D038C1A6EAB5000F88F4E /* CursorKind.swift in Sources */,
-				451440991A6F380900242EA3 /* SourceLocation+Printable.swift in Sources */,
+				45494C2A1A6F4F2800859DDF /* SourceLocation.swift in Sources */,
+				45494C2C1A6F4F2800859DDF /* String.swift in Sources */,
+				45494C271A6F4F2800859DDF /* CursorKind+Aliases.swift in Sources */,
+				45494C281A6F4F2800859DDF /* CursorKind+Stringification.swift in Sources */,
+				45494C261A6F4F2800859DDF /* CursorKind.swift in Sources */,
+				45494C291A6F4F2800859DDF /* ChildVisitResult.swift in Sources */,
+				45494C241A6F4F2800859DDF /* Cursor+Printable.swift in Sources */,
+				45494C251A6F4F2800859DDF /* Cursor+Iteration.swift in Sources */,
+				45494C2D1A6F4F2800859DDF /* CCharArrayOfCCharArray.swift in Sources */,
+				45494C221A6F4F2800859DDF /* ClangWrapper.swift in Sources */,
+				45494C231A6F4F2800859DDF /* Cursor.swift in Sources */,
+				45494C2B1A6F4F2800859DDF /* SourceLocation+Printable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

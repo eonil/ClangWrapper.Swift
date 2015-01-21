@@ -12,7 +12,7 @@ import Foundation
 extension CursorKind: Printable {
 	public var description:String {
 		get{
-			let	a	=	[firstNameOf(self)] + collectAliases(self)
+			let	a	=	[firstNameOf(self)] + aliasesOf(self)
 			let	s	=	join("/", a)
 			return	s
 		}
@@ -486,7 +486,15 @@ private func firstNameOf(v:CursorKind) -> String {
 	}
 	
 }
-private func collectAliases(v:CursorKind) -> [String] {
+
+
+
+
+
+
+
+
+private func aliasesOf(v:CursorKind) -> [String] {
 	var	s	=	[] as [String]
 	
 	if v == CursorKind.FirstDecl { s.append("FirstDecl") }
@@ -534,3 +542,11 @@ private func collectAliases(v:CursorKind) -> [String] {
 
 	return	s
 }
+
+
+
+
+
+
+
+

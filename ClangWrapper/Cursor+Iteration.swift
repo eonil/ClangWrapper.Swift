@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension Cursor {
+public extension Cursor {
 	///	This copied all direct children cursors into an array.
-	var children:[Cursor] {
+	public var children:[Cursor] {
 		get {
 			var	cs	=	[] as [Cursor]
 			self.visitChildrenWithBlock { (cursor, parent) -> ChildVisitResult in
