@@ -118,9 +118,12 @@ References
 
 License
 -------
-Licensed under MIT license.
-
-
+Portion of my work is licensed under "MIT license".
+This project contains some header files from LLVM project. That is licensed under "University of Illinois/NCSA Open Source License".
+The portion of LLVM project is all header files in `/ClangWrapper/include` directory.
+The product of this project will be linked to a component of Xcode. That is a intellectual property of Apple. You can avoid this by 
+changing link parameters. I don't redistribute any code from Xcode, so I believe this linking is fine. But please let me know if 
+something is wrong.
 
 
 
