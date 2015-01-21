@@ -6,19 +6,15 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2F514E6E-040E-4B65-963C-21E42F25F159</string>
-	<key>IDESourceControlProjectName</key>
-	<string>ClangWrapperOnly</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</key>
 		<string>https://github.com/Eonil/ClangWrapper.Swift.git</string>
 	</dict>
-	<key>IDESourceControlProjectPath</key>
-	<string>ClangWrapperOnly.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</key>
-		<string>..</string>
+		<string>ClangWrapper/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Eonil/ClangWrapper.Swift.git</string>

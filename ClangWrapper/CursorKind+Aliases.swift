@@ -26,7 +26,7 @@ public extension CursorKind {
 //	case ObjCSuperClassRef             = 40
 	public static var ObjCSuperClassRef:CursorKind {
 		get {
-			return	CursorKind(rawValue: 40)!
+			return	CursorKind(raw: CXCursor_ObjCSuperClassRef)
 		}
 	}
 	
@@ -40,7 +40,7 @@ public extension CursorKind {
 //	case InvalidFile                   = 70
 	public static var InvalidFile:CursorKind {
 		get {
-			return	CursorKind(rawValue: 70)!
+			return	CursorKind(raw: CXCursor_InvalidFile)
 		}
 	}
 	
@@ -64,7 +64,7 @@ public extension CursorKind {
 //	case UnexposedExpr                 = 100
 	public static var UnexposedExpr:CursorKind {
 		get {
-			return	CursorKind(rawValue: 100)!
+			return	CursorKind(raw: CXCursor_UnexposedExpr)
 		}
 	}
 	
@@ -90,7 +90,7 @@ public extension CursorKind {
 //	case UnexposedStmt                 = 200
 	public static var UnexposedStmt:CursorKind {
 		get {
-			return	CursorKind(rawValue: 200)!
+			return	CursorKind(raw: CXCursor_UnexposedStmt)
 		}
 	}
 	
@@ -118,7 +118,7 @@ public extension CursorKind {
 //	case UnexposedAttr                 = 400
 	public static var UnexposedAttr:CursorKind {
 		get {
-			return	CursorKind(rawValue: 400)!
+			return	CursorKind(raw: CXCursor_UnexposedAttr)
 		}
 	}
 	

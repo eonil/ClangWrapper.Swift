@@ -9,9 +9,16 @@
 import Foundation
 
 public struct Cursor {
+	///	Returns the translation unit that a cursor originated from.
+	public var translationUnit:TranslationUnit {
+		get {
+			let	r	=	clang_Cursor_getTranslationUnit(raw)
+			return	TranslationUnit(index: index, raw: r)
+		}
+	}
 	public func visitChildrenWithBlock(block:(cursor:Cursor, parent:Cursor)->ChildVisitResult) {
 		let	r	=	clang_visitChildrenWithBlock(raw) { (cursor:CXCursor, parent:CXCursor) -> CXChildVisitResult in
-			let	r1	=	block(cursor: Cursor(raw: cursor), parent: Cursor(raw: parent))
+			let	r1	=	block(cursor: Cursor(index: self.index, raw: cursor), parent: Cursor(index: self.index, raw: parent))
 			
 			return	r1.raw
 		}
@@ -19,7 +26,13 @@ public struct Cursor {
 	public var kind:CursorKind {
 		get {
 			let	r	=	clang_getCursorKind(raw)
-			return	CursorKind(rawValue: r.value)!
+			return	CursorKind(raw: r)
+		}
+	}
+	public var type:Type {
+		get {
+			let	r	=	clang_getCursorType(raw)
+			return	Type(raw: r)
 		}
 	}
 	public var extent:SourceRange {
@@ -28,20 +41,27 @@ public struct Cursor {
 			return	SourceRange(raw: r)
 		}
 	}
-	public var spelling:String {
+	
+	//	Prefixed with module name to avoid compiler crash.
+	public var CXXAccessSpecifier:ClangWrapper.CXXAccessSpecifier {
 		get {
-			let	s	=	clang_getCursorSpelling(raw)
-			let	s1	=	toSwiftString(s, true)
-			return	s1
+			let	r	=	clang_getCXXAccessSpecifier(raw)
+			return	ClangWrapper.CXXAccessSpecifier(raw: r)
 		}
 	}
-	
+
 	////
 	
+	let	index:UnmanagedIndexRef
 	let	raw:CXCursor
 	
-	init(raw: CXCursor) {
+	init(index:UnmanagedIndexRef, raw: CXCursor) {
+		self.index	=	index
 		self.raw	=	raw
 	}
 }
+
+
+
+
 

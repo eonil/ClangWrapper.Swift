@@ -11,36 +11,20 @@ import Foundation
 public extension Cursor {
 	public var description:String {
 		get {
-			var	s	=	""
-			runOverChildrenOf(self, 0, &s)
-			return	s
+			let	extras	=	getExtras(self)
+			let	extras1	=	extras == nil ? "" : ", \(extras!)"
+			return	"\(kind):\(type.kind), [\(spelling)](\(extent))\(extras1)"
 		}
 	}
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-private func runOverChildrenOf<O:OutputStreamType>(c:Cursor, depth:Int, inout s:O) {
-	c.visitChildrenWithBlock { (cursor, parent) -> ChildVisitResult in
-		let	indent	=	join("", Repeat(count: depth, repeatedValue: "  "))
-		s.write("\(indent)\(cursor.spelling) (\(cursor.kind), \(c.extent))")
-		s.write("\n")
-		runOverChildrenOf(cursor, depth+1, &s)
-		return	ChildVisitResult.Continue
+private func getExtras(c:Cursor) -> String? {
+	if c.kind == CursorKind.CXXAccessSpecifier {
+	}
+	switch c.kind {
+	case .CXXAccessSpecifier:	return	"CXXAccessSpecifier = \(c.CXXAccessSpecifier.description)"
+	default:					return	nil
 	}
 }
-
-
-
-
-

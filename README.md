@@ -26,7 +26,7 @@ Here's a quick example. (a part of `Workbench` example)
 	println(d.spelling)
 	}
 
-	println(transunit.cursor.description)
+	println(transunit)
 
 Above code should print something like this.
 
@@ -96,7 +96,13 @@ Design Choices
 --------------
 -	All strings are passed by copy. Performance can be decreased.
 -	An extra method like `stringBuffer` can be added later for efficiency.
-
+-	`Index` class serves as local proxy root controller. It manages all the proxy objects connected over C API.
+	You have to keep a reference to `Index` object to keep any of its object.
+-	Uses C-like tree (unique-ownership) manual resource management. That means you need to call `dispose` 
+	manually on them to free up allocated resources. If an object does not support `dispose`, it means it does 
+	not allocate resources internally.
+-	For your safety and convenience, all proxy objects will be tracked and `dispose`d when `Index` deinitializes
+	if it has not been disposed. 
 
 
 

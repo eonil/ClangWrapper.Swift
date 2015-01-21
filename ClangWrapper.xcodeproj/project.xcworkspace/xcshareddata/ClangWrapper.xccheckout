@@ -5,32 +5,32 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1D4668AE-68D9-40B9-A41F-D1DD9792D373</string>
+	<string>BB754B58-52A1-4907-BAFB-FEB1AAF56E9C</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</key>
-		<string>https://github.com/Homebrew/homebrew.git</string>
+		<key>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</key>
+		<string>https://github.com/Eonil/ClangWrapper.Swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</key>
-		<string>homebrew/</string>
+		<key>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</key>
+		<string>ClangWrapper/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Homebrew/homebrew.git</string>
+	<string>https://github.com/Eonil/ClangWrapper.Swift.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</string>
+	<string>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</string>
+			<string>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>homebrew</string>
+			<string>ClangWrapper</string>
 		</dict>
 	</array>
 </dict>
