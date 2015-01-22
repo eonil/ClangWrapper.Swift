@@ -26,7 +26,7 @@ public struct Diagnostic: TrackableRemoteObjectProxy {
 		get {
 			let	s	=	clang_getDiagnosticSpelling(raw);
 			let	s1	=	toSwiftString(s, true)
-			return	s1
+			return	s1!
 		}
 	}
 	

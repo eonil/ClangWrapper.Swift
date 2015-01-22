@@ -13,7 +13,7 @@ public struct Type: Equatable {
 		get {
 			let	s	=	clang_getTypeSpelling(raw)
 			let	s1	=	toSwiftString(s, true)
-			return	s1
+			return	s1!
 		}
 	}
 	public var kind:TypeKind {
@@ -72,6 +72,11 @@ public struct Type: Equatable {
 	public var isRestrictQualifiedType:Bool {
 		get {
 			return	clang_isConstQualifiedType(raw) != 0
+		}
+	}
+	public var CXXRefQualifier:RefQualifierKind {
+		get {
+			return	RefQualifierKind(raw: clang_Type_getCXXRefQualifier(raw))
 		}
 	}
 	

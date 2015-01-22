@@ -15,7 +15,7 @@ public struct File {
 		get {
 			let	s	=	clang_getFileName(raw);
 			let	s1	=	toSwiftString(s, true)
-			return	s1
+			return	s1!
 		}
 	}
 	

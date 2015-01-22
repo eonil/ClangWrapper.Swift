@@ -54,6 +54,7 @@
 		4576193E1A6FA992004479B6 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193D1A6FA992004479B6 /* Diagnostic.swift */; };
 		457619401A6FA9A0004479B6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193F1A6FA9A0004479B6 /* File.swift */; };
 		459E8F8C1A6E92A100EF8DCE /* ClangWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45A3897A1A70F960008C6793 /* RefQualifierKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A389791A70F960008C6793 /* RefQualifierKind.swift */; };
 		45A6514F1A6FC86E007B9841 /* Cursor+SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A6514E1A6FC86E007B9841 /* Cursor+SourceCode.swift */; };
 		45C7054F1A6F660800CA4E7B /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7054E1A6F660800CA4E7B /* Type.swift */; };
 		45C705511A6F66D300CA4E7B /* TypeKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705501A6F66D300CA4E7B /* TypeKind.swift */; };
@@ -146,6 +147,7 @@
 		459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459E8F8A1A6E92A100EF8DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClangWrapper.h; sourceTree = "<group>"; };
+		45A389791A70F960008C6793 /* RefQualifierKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefQualifierKind.swift; sourceTree = "<group>"; };
 		45A6514E1A6FC86E007B9841 /* Cursor+SourceCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+SourceCode.swift"; sourceTree = "<group>"; };
 		45C7054E1A6F660800CA4E7B /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		45C705501A6F66D300CA4E7B /* TypeKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeKind.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				45C705501A6F66D300CA4E7B /* TypeKind.swift */,
 				45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */,
 				45494C371A6F5CB300859DDF /* CXXAccessSpecifier.swift */,
+				45A389791A70F960008C6793 /* RefQualifierKind.swift */,
 				4514408A1A6F2A8F00242EA3 /* ChildVisitResult.swift */,
 				456A0FB41A6F8EDB00A1DF5B /* Token.swift */,
 				456FAFD61A6F94C0002FA16C /* TokenSequence.swift */,
@@ -453,6 +456,7 @@
 				45494C261A6F4F2800859DDF /* CursorKind.swift in Sources */,
 				456A0FB31A6F83FC00A1DF5B /* TranslationUnit+Printable.swift in Sources */,
 				45494C291A6F4F2800859DDF /* ChildVisitResult.swift in Sources */,
+				45A3897A1A70F960008C6793 /* RefQualifierKind.swift in Sources */,
 				4576193A1A6FA971004479B6 /* Index.swift in Sources */,
 				4576193E1A6FA992004479B6 /* Diagnostic.swift in Sources */,
 				456FAFDD1A6FA435002FA16C /* Debug.swift in Sources */,

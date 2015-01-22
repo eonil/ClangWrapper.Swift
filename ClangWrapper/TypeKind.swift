@@ -120,7 +120,7 @@ extension TypeKind {
 		get {
 			let	s	=	clang_getTypeKindSpelling(raw)
 			let	s1	=	toSwiftString(s, true)
-			return	s1
+			return	s1!
 		}
 	}
 }

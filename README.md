@@ -51,6 +51,7 @@ Some points.
 -	Only fundamental feature are in the classes. Extension features are in extensions.
 -	There's [an awesome overview about C API by "Mike Ash"](https://www.mikeash.com/pyblog/friday-qa-2014-01-24-introduction-to-libclang.html).
 	As this wrapper models C API as is, the text should help a lot.
+-	Also you must see this slide. ["libclang: Thinking Beyond the Compiler" Doug Gregor, Apple Inc.](http://llvm.org/devmtg/2010-11/Gregor-libclang.pdf)
 
 
 If you want to force specific language mode, use this method.
@@ -113,6 +114,7 @@ References
 ----------
 
 -	[Awesome introduction to `libclang` C API by Mike Ash](https://www.mikeash.com/pyblog/friday-qa-2014-01-24-introduction-to-libclang.html).
+-	[Even better introduction to `libclang` C API by Doug Gregor](http://llvm.org/devmtg/2010-11/Gregor-libclang.pdf)
 
 
 

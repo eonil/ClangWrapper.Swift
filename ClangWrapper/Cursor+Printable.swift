@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Cursor {
+extension Cursor: Printable {
 	public var description:String {
 		get {
 			let	extras	=	getExtras(self)

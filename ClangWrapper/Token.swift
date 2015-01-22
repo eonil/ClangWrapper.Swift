@@ -20,7 +20,7 @@ public struct Token {
 		get {
 			let	s	=	clang_getTokenSpelling(sequence.rawtu, raw)
 			let	s1	=	toSwiftString(s, true)
-			return	s1
+			return	s1!
 		}
 	}
 	public var location:SourceLocation {
