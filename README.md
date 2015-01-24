@@ -70,8 +70,8 @@ If you want to force specific language mode, use this method.
 
 
 
-Caveats
--------
+Cautions
+--------
 -	This framework is designed for Swift.
 
 -	This framework links to `libclang.dylib` included in Xcode.
