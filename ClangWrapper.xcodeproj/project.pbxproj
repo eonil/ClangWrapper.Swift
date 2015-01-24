@@ -12,9 +12,71 @@
 		4505E5D81A6F25E600C555A6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4505E5D61A6F25E600C555A6 /* MainMenu.xib */; };
 		4505E5EB1A6F25FB00C555A6 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D03861A6EA01F00F88F4E /* libclang.dylib */; };
 		4505E5EC1A6F25FB00C555A6 /* ClangWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; };
-		4505E5EF1A6F260700C555A6 /* ClangWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; };
 		4505E5F01A6F260700C555A6 /* ClangWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4514409B1A6F38F700242EA3 /* Sample.c in Resources */ = {isa = PBXBuildFile; fileRef = 4514409A1A6F38F700242EA3 /* Sample.c */; };
+		451C0D301A733F8300A5034F /* lldb-defines.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF11A733F7200A5034F /* lldb-defines.h */; };
+		451C0D311A733F8300A5034F /* lldb-enumerations.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF21A733F7200A5034F /* lldb-enumerations.h */; };
+		451C0D321A733F8300A5034F /* lldb-forward.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF31A733F7200A5034F /* lldb-forward.h */; };
+		451C0D331A733F8300A5034F /* lldb-public.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF41A733F7200A5034F /* lldb-public.h */; };
+		451C0D341A733F8300A5034F /* lldb-types.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF51A733F7200A5034F /* lldb-types.h */; };
+		451C0D351A733F8300A5034F /* lldb-versioning.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF61A733F7200A5034F /* lldb-versioning.h */; };
+		451C0D361A733F8300A5034F /* LLDB.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF71A733F7200A5034F /* LLDB.h */; };
+		451C0D371A733F8300A5034F /* SBAddress.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF81A733F7200A5034F /* SBAddress.h */; };
+		451C0D381A733F8300A5034F /* SBBlock.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CF91A733F7200A5034F /* SBBlock.h */; };
+		451C0D391A733F8300A5034F /* SBBreakpoint.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CFA1A733F7200A5034F /* SBBreakpoint.h */; };
+		451C0D3A1A733F8300A5034F /* SBBreakpointLocation.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CFB1A733F7200A5034F /* SBBreakpointLocation.h */; };
+		451C0D3B1A733F8300A5034F /* SBBroadcaster.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CFC1A733F7200A5034F /* SBBroadcaster.h */; };
+		451C0D3C1A733F8300A5034F /* SBCommandInterpreter.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CFD1A733F7200A5034F /* SBCommandInterpreter.h */; };
+		451C0D3D1A733F8300A5034F /* SBCommandReturnObject.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CFE1A733F7200A5034F /* SBCommandReturnObject.h */; };
+		451C0D3E1A733F8300A5034F /* SBCommunication.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0CFF1A733F7200A5034F /* SBCommunication.h */; };
+		451C0D3F1A733F8300A5034F /* SBCompileUnit.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D001A733F7200A5034F /* SBCompileUnit.h */; };
+		451C0D401A733F8300A5034F /* SBData.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D011A733F7200A5034F /* SBData.h */; };
+		451C0D411A733F8300A5034F /* SBDebugger.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D021A733F7200A5034F /* SBDebugger.h */; };
+		451C0D421A733F8300A5034F /* SBDeclaration.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D031A733F7200A5034F /* SBDeclaration.h */; };
+		451C0D431A733F8300A5034F /* SBDefines.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D041A733F7200A5034F /* SBDefines.h */; };
+		451C0D441A733F8300A5034F /* SBError.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D051A733F7200A5034F /* SBError.h */; };
+		451C0D451A733F8300A5034F /* SBEvent.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D061A733F7200A5034F /* SBEvent.h */; };
+		451C0D461A733F8300A5034F /* SBExecutionContext.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D071A733F7200A5034F /* SBExecutionContext.h */; };
+		451C0D471A733F8300A5034F /* SBExpressionOptions.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D081A733F7200A5034F /* SBExpressionOptions.h */; };
+		451C0D481A733F8300A5034F /* SBFileSpec.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D091A733F7200A5034F /* SBFileSpec.h */; };
+		451C0D491A733F8300A5034F /* SBFileSpecList.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D0A1A733F7200A5034F /* SBFileSpecList.h */; };
+		451C0D4A1A733F8300A5034F /* SBFrame.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D0B1A733F7200A5034F /* SBFrame.h */; };
+		451C0D4B1A733F8300A5034F /* SBFunction.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D0C1A733F7200A5034F /* SBFunction.h */; };
+		451C0D4C1A733F8300A5034F /* SBHostOS.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D0D1A733F7200A5034F /* SBHostOS.h */; };
+		451C0D4D1A733F8300A5034F /* SBInstruction.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D0E1A733F7200A5034F /* SBInstruction.h */; };
+		451C0D4E1A733F8300A5034F /* SBInstructionList.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D0F1A733F7200A5034F /* SBInstructionList.h */; };
+		451C0D4F1A733F8300A5034F /* SBLineEntry.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D101A733F7200A5034F /* SBLineEntry.h */; };
+		451C0D501A733F8300A5034F /* SBListener.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D111A733F7200A5034F /* SBListener.h */; };
+		451C0D511A733F8300A5034F /* SBModule.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D121A733F7200A5034F /* SBModule.h */; };
+		451C0D521A733F8300A5034F /* SBModuleSpec.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D131A733F7200A5034F /* SBModuleSpec.h */; };
+		451C0D531A733F8300A5034F /* SBPlatform.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D141A733F7200A5034F /* SBPlatform.h */; };
+		451C0D541A733F8300A5034F /* SBProcess.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D151A733F7200A5034F /* SBProcess.h */; };
+		451C0D551A733F8300A5034F /* SBQueue.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D161A733F7200A5034F /* SBQueue.h */; };
+		451C0D561A733F8300A5034F /* SBQueueItem.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D171A733F7200A5034F /* SBQueueItem.h */; };
+		451C0D571A733F8300A5034F /* SBSection.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D181A733F7200A5034F /* SBSection.h */; };
+		451C0D581A733F8300A5034F /* SBSourceManager.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D191A733F7200A5034F /* SBSourceManager.h */; };
+		451C0D591A733F8300A5034F /* SBStream.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D1A1A733F7200A5034F /* SBStream.h */; };
+		451C0D5A1A733F8300A5034F /* SBStringList.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D1B1A733F7200A5034F /* SBStringList.h */; };
+		451C0D5B1A733F8300A5034F /* SBSymbol.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D1C1A733F7200A5034F /* SBSymbol.h */; };
+		451C0D5C1A733F8300A5034F /* SBSymbolContext.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D1D1A733F7200A5034F /* SBSymbolContext.h */; };
+		451C0D5D1A733F8300A5034F /* SBSymbolContextList.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D1E1A733F7200A5034F /* SBSymbolContextList.h */; };
+		451C0D5E1A733F8300A5034F /* SBTarget.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D1F1A733F7200A5034F /* SBTarget.h */; };
+		451C0D5F1A733F8300A5034F /* SBThread.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D201A733F7200A5034F /* SBThread.h */; };
+		451C0D601A733F8300A5034F /* SBThreadCollection.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D211A733F7200A5034F /* SBThreadCollection.h */; };
+		451C0D611A733F8300A5034F /* SBThreadPlan.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D221A733F7200A5034F /* SBThreadPlan.h */; };
+		451C0D621A733F8300A5034F /* SBType.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D231A733F7200A5034F /* SBType.h */; };
+		451C0D631A733F8300A5034F /* SBTypeCategory.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D241A733F7200A5034F /* SBTypeCategory.h */; };
+		451C0D641A733F8300A5034F /* SBTypeEnumMember.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D251A733F7200A5034F /* SBTypeEnumMember.h */; };
+		451C0D651A733F8300A5034F /* SBTypeFilter.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D261A733F7200A5034F /* SBTypeFilter.h */; };
+		451C0D661A733F8300A5034F /* SBTypeFormat.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D271A733F7200A5034F /* SBTypeFormat.h */; };
+		451C0D671A733F8300A5034F /* SBTypeNameSpecifier.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D281A733F7200A5034F /* SBTypeNameSpecifier.h */; };
+		451C0D681A733F8300A5034F /* SBTypeSummary.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D291A733F7200A5034F /* SBTypeSummary.h */; };
+		451C0D691A733F8300A5034F /* SBTypeSynthetic.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D2A1A733F7200A5034F /* SBTypeSynthetic.h */; };
+		451C0D6A1A733F8300A5034F /* SBUnixSignals.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D2B1A733F7200A5034F /* SBUnixSignals.h */; };
+		451C0D6B1A733F8300A5034F /* SBValue.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D2C1A733F7200A5034F /* SBValue.h */; };
+		451C0D6C1A733F8300A5034F /* SBValueList.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D2D1A733F7200A5034F /* SBValueList.h */; };
+		451C0D6D1A733F8300A5034F /* SBWatchpoint.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D2E1A733F7200A5034F /* SBWatchpoint.h */; };
+		451C0D6E1A733F8300A5034F /* SharingPtr.h in Resources */ = {isa = PBXBuildFile; fileRef = 451C0D2F1A733F7200A5034F /* SharingPtr.h */; };
 		451EB48F1A723C59002E7E77 /* Cursor+CPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EB48E1A723C59002E7E77 /* Cursor+CPP.swift */; };
 		452D032E1A6E9CB900F88F4E /* BuildSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03271A6E9CB900F88F4E /* BuildSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D032F1A6E9CB900F88F4E /* CXCompilationDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,16 +116,32 @@
 		4576193C1A6FA982004479B6 /* TranslationUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193B1A6FA982004479B6 /* TranslationUnit.swift */; };
 		4576193E1A6FA992004479B6 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193D1A6FA992004479B6 /* Diagnostic.swift */; };
 		457619401A6FA9A0004479B6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193F1A6FA9A0004479B6 /* File.swift */; };
+		45768D461A734B9800B2C8CD /* SyntaxOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45768D451A734B9800B2C8CD /* SyntaxOutlineViewController.swift */; };
+		45768D481A734B9F00B2C8CD /* TypeOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45768D471A734B9F00B2C8CD /* TypeOutlineViewController.swift */; };
 		459E8F8C1A6E92A100EF8DCE /* ClangWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45A3897A1A70F960008C6793 /* RefQualifierKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A389791A70F960008C6793 /* RefQualifierKind.swift */; };
 		45A6514F1A6FC86E007B9841 /* Cursor+SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A6514E1A6FC86E007B9841 /* Cursor+SourceCode.swift */; };
 		45C7054F1A6F660800CA4E7B /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7054E1A6F660800CA4E7B /* Type.swift */; };
 		45C705511A6F66D300CA4E7B /* TypeKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705501A6F66D300CA4E7B /* TypeKind.swift */; };
 		45C705531A6F684700CA4E7B /* TypeKind+Stringification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */; };
+		45F3CA731A73373300BD4352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3CA721A73373300BD4352 /* AppDelegate.swift */; };
+		45F3CA751A73373300BD4352 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F3CA741A73373300BD4352 /* Images.xcassets */; };
+		45F3CA781A73373300BD4352 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45F3CA761A73373300BD4352 /* MainMenu.xib */; };
+		45F3CA8B1A73374800BD4352 /* ClangWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; };
+		45F3CA8C1A73374800BD4352 /* ClangWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45F3CA901A73374D00BD4352 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D03861A6EA01F00F88F4E /* libclang.dylib */; };
+		45F3CA921A7338D400BD4352 /* AST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3CA911A7338D400BD4352 /* AST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4505E5ED1A6F260000C555A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 459E8F701A6E928100EF8DCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 459E8F861A6E92A100EF8DCE;
+			remoteInfo = ClangWrapper;
+		};
+		45F3CA8D1A73374800BD4352 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 459E8F701A6E928100EF8DCE /* Project object */;
 			proxyType = 1;
@@ -93,6 +171,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45F3CA8F1A73374800BD4352 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45F3CA8C1A73374800BD4352 /* ClangWrapper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +201,69 @@
 		451440961A6F37D900242EA3 /* SourceLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
 		451440981A6F380900242EA3 /* SourceLocation+Printable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SourceLocation+Printable.swift"; sourceTree = "<group>"; };
 		4514409A1A6F38F700242EA3 /* Sample.c */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = Sample.c; sourceTree = "<group>"; };
+		451C0CF11A733F7200A5034F /* lldb-defines.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = "lldb-defines.h"; sourceTree = "<group>"; };
+		451C0CF21A733F7200A5034F /* lldb-enumerations.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = "lldb-enumerations.h"; sourceTree = "<group>"; };
+		451C0CF31A733F7200A5034F /* lldb-forward.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = "lldb-forward.h"; sourceTree = "<group>"; };
+		451C0CF41A733F7200A5034F /* lldb-public.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = "lldb-public.h"; sourceTree = "<group>"; };
+		451C0CF51A733F7200A5034F /* lldb-types.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = "lldb-types.h"; sourceTree = "<group>"; };
+		451C0CF61A733F7200A5034F /* lldb-versioning.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = "lldb-versioning.h"; sourceTree = "<group>"; };
+		451C0CF71A733F7200A5034F /* LLDB.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = LLDB.h; sourceTree = "<group>"; };
+		451C0CF81A733F7200A5034F /* SBAddress.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBAddress.h; sourceTree = "<group>"; };
+		451C0CF91A733F7200A5034F /* SBBlock.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBBlock.h; sourceTree = "<group>"; };
+		451C0CFA1A733F7200A5034F /* SBBreakpoint.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBBreakpoint.h; sourceTree = "<group>"; };
+		451C0CFB1A733F7200A5034F /* SBBreakpointLocation.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBBreakpointLocation.h; sourceTree = "<group>"; };
+		451C0CFC1A733F7200A5034F /* SBBroadcaster.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBBroadcaster.h; sourceTree = "<group>"; };
+		451C0CFD1A733F7200A5034F /* SBCommandInterpreter.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBCommandInterpreter.h; sourceTree = "<group>"; };
+		451C0CFE1A733F7200A5034F /* SBCommandReturnObject.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBCommandReturnObject.h; sourceTree = "<group>"; };
+		451C0CFF1A733F7200A5034F /* SBCommunication.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBCommunication.h; sourceTree = "<group>"; };
+		451C0D001A733F7200A5034F /* SBCompileUnit.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBCompileUnit.h; sourceTree = "<group>"; };
+		451C0D011A733F7200A5034F /* SBData.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBData.h; sourceTree = "<group>"; };
+		451C0D021A733F7200A5034F /* SBDebugger.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBDebugger.h; sourceTree = "<group>"; };
+		451C0D031A733F7200A5034F /* SBDeclaration.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBDeclaration.h; sourceTree = "<group>"; };
+		451C0D041A733F7200A5034F /* SBDefines.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBDefines.h; sourceTree = "<group>"; };
+		451C0D051A733F7200A5034F /* SBError.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBError.h; sourceTree = "<group>"; };
+		451C0D061A733F7200A5034F /* SBEvent.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBEvent.h; sourceTree = "<group>"; };
+		451C0D071A733F7200A5034F /* SBExecutionContext.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBExecutionContext.h; sourceTree = "<group>"; };
+		451C0D081A733F7200A5034F /* SBExpressionOptions.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBExpressionOptions.h; sourceTree = "<group>"; };
+		451C0D091A733F7200A5034F /* SBFileSpec.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBFileSpec.h; sourceTree = "<group>"; };
+		451C0D0A1A733F7200A5034F /* SBFileSpecList.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBFileSpecList.h; sourceTree = "<group>"; };
+		451C0D0B1A733F7200A5034F /* SBFrame.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBFrame.h; sourceTree = "<group>"; };
+		451C0D0C1A733F7200A5034F /* SBFunction.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBFunction.h; sourceTree = "<group>"; };
+		451C0D0D1A733F7200A5034F /* SBHostOS.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBHostOS.h; sourceTree = "<group>"; };
+		451C0D0E1A733F7200A5034F /* SBInstruction.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBInstruction.h; sourceTree = "<group>"; };
+		451C0D0F1A733F7200A5034F /* SBInstructionList.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBInstructionList.h; sourceTree = "<group>"; };
+		451C0D101A733F7200A5034F /* SBLineEntry.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBLineEntry.h; sourceTree = "<group>"; };
+		451C0D111A733F7200A5034F /* SBListener.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBListener.h; sourceTree = "<group>"; };
+		451C0D121A733F7200A5034F /* SBModule.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBModule.h; sourceTree = "<group>"; };
+		451C0D131A733F7200A5034F /* SBModuleSpec.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBModuleSpec.h; sourceTree = "<group>"; };
+		451C0D141A733F7200A5034F /* SBPlatform.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBPlatform.h; sourceTree = "<group>"; };
+		451C0D151A733F7200A5034F /* SBProcess.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBProcess.h; sourceTree = "<group>"; };
+		451C0D161A733F7200A5034F /* SBQueue.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBQueue.h; sourceTree = "<group>"; };
+		451C0D171A733F7200A5034F /* SBQueueItem.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBQueueItem.h; sourceTree = "<group>"; };
+		451C0D181A733F7200A5034F /* SBSection.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBSection.h; sourceTree = "<group>"; };
+		451C0D191A733F7200A5034F /* SBSourceManager.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBSourceManager.h; sourceTree = "<group>"; };
+		451C0D1A1A733F7200A5034F /* SBStream.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBStream.h; sourceTree = "<group>"; };
+		451C0D1B1A733F7200A5034F /* SBStringList.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBStringList.h; sourceTree = "<group>"; };
+		451C0D1C1A733F7200A5034F /* SBSymbol.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBSymbol.h; sourceTree = "<group>"; };
+		451C0D1D1A733F7200A5034F /* SBSymbolContext.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBSymbolContext.h; sourceTree = "<group>"; };
+		451C0D1E1A733F7200A5034F /* SBSymbolContextList.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBSymbolContextList.h; sourceTree = "<group>"; };
+		451C0D1F1A733F7200A5034F /* SBTarget.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTarget.h; sourceTree = "<group>"; };
+		451C0D201A733F7200A5034F /* SBThread.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBThread.h; sourceTree = "<group>"; };
+		451C0D211A733F7200A5034F /* SBThreadCollection.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBThreadCollection.h; sourceTree = "<group>"; };
+		451C0D221A733F7200A5034F /* SBThreadPlan.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBThreadPlan.h; sourceTree = "<group>"; };
+		451C0D231A733F7200A5034F /* SBType.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBType.h; sourceTree = "<group>"; };
+		451C0D241A733F7200A5034F /* SBTypeCategory.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeCategory.h; sourceTree = "<group>"; };
+		451C0D251A733F7200A5034F /* SBTypeEnumMember.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeEnumMember.h; sourceTree = "<group>"; };
+		451C0D261A733F7200A5034F /* SBTypeFilter.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeFilter.h; sourceTree = "<group>"; };
+		451C0D271A733F7200A5034F /* SBTypeFormat.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeFormat.h; sourceTree = "<group>"; };
+		451C0D281A733F7200A5034F /* SBTypeNameSpecifier.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeNameSpecifier.h; sourceTree = "<group>"; };
+		451C0D291A733F7200A5034F /* SBTypeSummary.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeSummary.h; sourceTree = "<group>"; };
+		451C0D2A1A733F7200A5034F /* SBTypeSynthetic.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBTypeSynthetic.h; sourceTree = "<group>"; };
+		451C0D2B1A733F7200A5034F /* SBUnixSignals.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBUnixSignals.h; sourceTree = "<group>"; };
+		451C0D2C1A733F7200A5034F /* SBValue.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBValue.h; sourceTree = "<group>"; };
+		451C0D2D1A733F7200A5034F /* SBValueList.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBValueList.h; sourceTree = "<group>"; };
+		451C0D2E1A733F7200A5034F /* SBWatchpoint.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SBWatchpoint.h; sourceTree = "<group>"; };
+		451C0D2F1A733F7200A5034F /* SharingPtr.h */ = {isa = PBXFileReference; explicitFileType = compiled; path = SharingPtr.h; sourceTree = "<group>"; };
 		451EB48E1A723C59002E7E77 /* Cursor+CPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+CPP.swift"; sourceTree = "<group>"; };
 		452D03271A6E9CB900F88F4E /* BuildSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildSystem.h; sourceTree = "<group>"; };
 		452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCompilationDatabase.h; sourceTree = "<group>"; };
@@ -146,6 +298,8 @@
 		4576193B1A6FA982004479B6 /* TranslationUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationUnit.swift; sourceTree = "<group>"; };
 		4576193D1A6FA992004479B6 /* Diagnostic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		4576193F1A6FA9A0004479B6 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		45768D451A734B9800B2C8CD /* SyntaxOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxOutlineViewController.swift; sourceTree = "<group>"; };
+		45768D471A734B9F00B2C8CD /* TypeOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOutlineViewController.swift; sourceTree = "<group>"; };
 		459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459E8F8A1A6E92A100EF8DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClangWrapper.h; sourceTree = "<group>"; };
@@ -154,6 +308,12 @@
 		45C7054E1A6F660800CA4E7B /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		45C705501A6F66D300CA4E7B /* TypeKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeKind.swift; sourceTree = "<group>"; };
 		45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TypeKind+Stringification.swift"; sourceTree = "<group>"; };
+		45F3CA6E1A73373300BD4352 /* ClangASTViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClangASTViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F3CA711A73373300BD4352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45F3CA721A73373300BD4352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45F3CA741A73373300BD4352 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45F3CA771A73373300BD4352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		45F3CA911A7338D400BD4352 /* AST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +323,6 @@
 			files = (
 				4505E5EB1A6F25FB00C555A6 /* libclang.dylib in Frameworks */,
 				4505E5EC1A6F25FB00C555A6 /* ClangWrapper.framework in Frameworks */,
-				4505E5EF1A6F260700C555A6 /* ClangWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +331,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				452D03871A6EA01F00F88F4E /* libclang.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F3CA6B1A73373300BD4352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F3CA8B1A73374800BD4352 /* ClangWrapper.framework in Frameworks */,
+				45F3CA901A73374D00BD4352 /* libclang.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +384,84 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		451C0CEF1A733F7200A5034F /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				451C0CF01A733F7200A5034F /* Headers */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
+		451C0CF01A733F7200A5034F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				451C0CF11A733F7200A5034F /* lldb-defines.h */,
+				451C0CF21A733F7200A5034F /* lldb-enumerations.h */,
+				451C0CF31A733F7200A5034F /* lldb-forward.h */,
+				451C0CF41A733F7200A5034F /* lldb-public.h */,
+				451C0CF51A733F7200A5034F /* lldb-types.h */,
+				451C0CF61A733F7200A5034F /* lldb-versioning.h */,
+				451C0CF71A733F7200A5034F /* LLDB.h */,
+				451C0CF81A733F7200A5034F /* SBAddress.h */,
+				451C0CF91A733F7200A5034F /* SBBlock.h */,
+				451C0CFA1A733F7200A5034F /* SBBreakpoint.h */,
+				451C0CFB1A733F7200A5034F /* SBBreakpointLocation.h */,
+				451C0CFC1A733F7200A5034F /* SBBroadcaster.h */,
+				451C0CFD1A733F7200A5034F /* SBCommandInterpreter.h */,
+				451C0CFE1A733F7200A5034F /* SBCommandReturnObject.h */,
+				451C0CFF1A733F7200A5034F /* SBCommunication.h */,
+				451C0D001A733F7200A5034F /* SBCompileUnit.h */,
+				451C0D011A733F7200A5034F /* SBData.h */,
+				451C0D021A733F7200A5034F /* SBDebugger.h */,
+				451C0D031A733F7200A5034F /* SBDeclaration.h */,
+				451C0D041A733F7200A5034F /* SBDefines.h */,
+				451C0D051A733F7200A5034F /* SBError.h */,
+				451C0D061A733F7200A5034F /* SBEvent.h */,
+				451C0D071A733F7200A5034F /* SBExecutionContext.h */,
+				451C0D081A733F7200A5034F /* SBExpressionOptions.h */,
+				451C0D091A733F7200A5034F /* SBFileSpec.h */,
+				451C0D0A1A733F7200A5034F /* SBFileSpecList.h */,
+				451C0D0B1A733F7200A5034F /* SBFrame.h */,
+				451C0D0C1A733F7200A5034F /* SBFunction.h */,
+				451C0D0D1A733F7200A5034F /* SBHostOS.h */,
+				451C0D0E1A733F7200A5034F /* SBInstruction.h */,
+				451C0D0F1A733F7200A5034F /* SBInstructionList.h */,
+				451C0D101A733F7200A5034F /* SBLineEntry.h */,
+				451C0D111A733F7200A5034F /* SBListener.h */,
+				451C0D121A733F7200A5034F /* SBModule.h */,
+				451C0D131A733F7200A5034F /* SBModuleSpec.h */,
+				451C0D141A733F7200A5034F /* SBPlatform.h */,
+				451C0D151A733F7200A5034F /* SBProcess.h */,
+				451C0D161A733F7200A5034F /* SBQueue.h */,
+				451C0D171A733F7200A5034F /* SBQueueItem.h */,
+				451C0D181A733F7200A5034F /* SBSection.h */,
+				451C0D191A733F7200A5034F /* SBSourceManager.h */,
+				451C0D1A1A733F7200A5034F /* SBStream.h */,
+				451C0D1B1A733F7200A5034F /* SBStringList.h */,
+				451C0D1C1A733F7200A5034F /* SBSymbol.h */,
+				451C0D1D1A733F7200A5034F /* SBSymbolContext.h */,
+				451C0D1E1A733F7200A5034F /* SBSymbolContextList.h */,
+				451C0D1F1A733F7200A5034F /* SBTarget.h */,
+				451C0D201A733F7200A5034F /* SBThread.h */,
+				451C0D211A733F7200A5034F /* SBThreadCollection.h */,
+				451C0D221A733F7200A5034F /* SBThreadPlan.h */,
+				451C0D231A733F7200A5034F /* SBType.h */,
+				451C0D241A733F7200A5034F /* SBTypeCategory.h */,
+				451C0D251A733F7200A5034F /* SBTypeEnumMember.h */,
+				451C0D261A733F7200A5034F /* SBTypeFilter.h */,
+				451C0D271A733F7200A5034F /* SBTypeFormat.h */,
+				451C0D281A733F7200A5034F /* SBTypeNameSpecifier.h */,
+				451C0D291A733F7200A5034F /* SBTypeSummary.h */,
+				451C0D2A1A733F7200A5034F /* SBTypeSynthetic.h */,
+				451C0D2B1A733F7200A5034F /* SBUnixSignals.h */,
+				451C0D2C1A733F7200A5034F /* SBValue.h */,
+				451C0D2D1A733F7200A5034F /* SBValueList.h */,
+				451C0D2E1A733F7200A5034F /* SBWatchpoint.h */,
+				451C0D2F1A733F7200A5034F /* SharingPtr.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		452D03251A6E9CB900F88F4E /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +493,7 @@
 				4505E5CF1A6F25E600C555A6 /* Workbench */,
 				4505E5E01A6F25E600C555A6 /* WorkbenchTests */,
 				452D03861A6EA01F00F88F4E /* libclang.dylib */,
+				45F3CA6F1A73373300BD4352 /* ClangASTViewer */,
 				459E8F791A6E928100EF8DCE /* Products */,
 				4505E6041A6F269200C555A6 /* Workbench copy-Info.plist */,
 			);
@@ -257,6 +504,7 @@
 			children = (
 				459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */,
 				4505E5CE1A6F25E600C555A6 /* Workbench.app */,
+				45F3CA6E1A73373300BD4352 /* ClangASTViewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,6 +558,29 @@
 			isa = PBXGroup;
 			children = (
 				459E8F8A1A6E92A100EF8DCE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45F3CA6F1A73373300BD4352 /* ClangASTViewer */ = {
+			isa = PBXGroup;
+			children = (
+				451C0CEF1A733F7200A5034F /* SampleData */,
+				45F3CA721A73373300BD4352 /* AppDelegate.swift */,
+				45768D451A734B9800B2C8CD /* SyntaxOutlineViewController.swift */,
+				45768D471A734B9F00B2C8CD /* TypeOutlineViewController.swift */,
+				45F3CA911A7338D400BD4352 /* AST.swift */,
+				45F3CA741A73373300BD4352 /* Images.xcassets */,
+				45F3CA761A73373300BD4352 /* MainMenu.xib */,
+				45F3CA701A73373300BD4352 /* Supporting Files */,
+			);
+			path = ClangASTViewer;
+			sourceTree = "<group>";
+		};
+		45F3CA701A73373300BD4352 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45F3CA711A73373300BD4352 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -373,6 +644,25 @@
 			productReference = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		45F3CA6D1A73373300BD4352 /* ClangASTViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F3CA891A73373300BD4352 /* Build configuration list for PBXNativeTarget "ClangASTViewer" */;
+			buildPhases = (
+				45F3CA6A1A73373300BD4352 /* Sources */,
+				45F3CA6B1A73373300BD4352 /* Frameworks */,
+				45F3CA6C1A73373300BD4352 /* Resources */,
+				45F3CA8F1A73374800BD4352 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45F3CA8E1A73374800BD4352 /* PBXTargetDependency */,
+			);
+			name = ClangASTViewer;
+			productName = ClangASTViewer;
+			productReference = 45F3CA6E1A73373300BD4352 /* ClangASTViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -386,6 +676,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					459E8F861A6E92A100EF8DCE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					45F3CA6D1A73373300BD4352 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -405,6 +698,7 @@
 			targets = (
 				459E8F861A6E92A100EF8DCE /* ClangWrapper */,
 				4505E5CD1A6F25E600C555A6 /* Workbench */,
+				45F3CA6D1A73373300BD4352 /* ClangASTViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -425,6 +719,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F3CA6C1A73373300BD4352 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451C0D531A733F8300A5034F /* SBPlatform.h in Resources */,
+				451C0D651A733F8300A5034F /* SBTypeFilter.h in Resources */,
+				451C0D411A733F8300A5034F /* SBDebugger.h in Resources */,
+				451C0D581A733F8300A5034F /* SBSourceManager.h in Resources */,
+				451C0D341A733F8300A5034F /* lldb-types.h in Resources */,
+				451C0D571A733F8300A5034F /* SBSection.h in Resources */,
+				451C0D491A733F8300A5034F /* SBFileSpecList.h in Resources */,
+				451C0D471A733F8300A5034F /* SBExpressionOptions.h in Resources */,
+				451C0D631A733F8300A5034F /* SBTypeCategory.h in Resources */,
+				451C0D5D1A733F8300A5034F /* SBSymbolContextList.h in Resources */,
+				451C0D361A733F8300A5034F /* LLDB.h in Resources */,
+				451C0D6C1A733F8300A5034F /* SBValueList.h in Resources */,
+				451C0D421A733F8300A5034F /* SBDeclaration.h in Resources */,
+				451C0D441A733F8300A5034F /* SBError.h in Resources */,
+				45F3CA751A73373300BD4352 /* Images.xcassets in Resources */,
+				451C0D621A733F8300A5034F /* SBType.h in Resources */,
+				451C0D3E1A733F8300A5034F /* SBCommunication.h in Resources */,
+				451C0D4B1A733F8300A5034F /* SBFunction.h in Resources */,
+				451C0D5A1A733F8300A5034F /* SBStringList.h in Resources */,
+				451C0D301A733F8300A5034F /* lldb-defines.h in Resources */,
+				451C0D391A733F8300A5034F /* SBBreakpoint.h in Resources */,
+				451C0D311A733F8300A5034F /* lldb-enumerations.h in Resources */,
+				451C0D5B1A733F8300A5034F /* SBSymbol.h in Resources */,
+				451C0D3B1A733F8300A5034F /* SBBroadcaster.h in Resources */,
+				451C0D541A733F8300A5034F /* SBProcess.h in Resources */,
+				451C0D431A733F8300A5034F /* SBDefines.h in Resources */,
+				451C0D6D1A733F8300A5034F /* SBWatchpoint.h in Resources */,
+				451C0D551A733F8300A5034F /* SBQueue.h in Resources */,
+				451C0D3C1A733F8300A5034F /* SBCommandInterpreter.h in Resources */,
+				451C0D641A733F8300A5034F /* SBTypeEnumMember.h in Resources */,
+				451C0D681A733F8300A5034F /* SBTypeSummary.h in Resources */,
+				451C0D5C1A733F8300A5034F /* SBSymbolContext.h in Resources */,
+				451C0D3D1A733F8300A5034F /* SBCommandReturnObject.h in Resources */,
+				451C0D381A733F8300A5034F /* SBBlock.h in Resources */,
+				451C0D5F1A733F8300A5034F /* SBThread.h in Resources */,
+				451C0D691A733F8300A5034F /* SBTypeSynthetic.h in Resources */,
+				451C0D611A733F8300A5034F /* SBThreadPlan.h in Resources */,
+				451C0D5E1A733F8300A5034F /* SBTarget.h in Resources */,
+				451C0D3A1A733F8300A5034F /* SBBreakpointLocation.h in Resources */,
+				451C0D461A733F8300A5034F /* SBExecutionContext.h in Resources */,
+				451C0D591A733F8300A5034F /* SBStream.h in Resources */,
+				451C0D4F1A733F8300A5034F /* SBLineEntry.h in Resources */,
+				451C0D661A733F8300A5034F /* SBTypeFormat.h in Resources */,
+				451C0D501A733F8300A5034F /* SBListener.h in Resources */,
+				451C0D521A733F8300A5034F /* SBModuleSpec.h in Resources */,
+				451C0D6E1A733F8300A5034F /* SharingPtr.h in Resources */,
+				45F3CA781A73373300BD4352 /* MainMenu.xib in Resources */,
+				451C0D4E1A733F8300A5034F /* SBInstructionList.h in Resources */,
+				451C0D671A733F8300A5034F /* SBTypeNameSpecifier.h in Resources */,
+				451C0D371A733F8300A5034F /* SBAddress.h in Resources */,
+				451C0D4A1A733F8300A5034F /* SBFrame.h in Resources */,
+				451C0D4C1A733F8300A5034F /* SBHostOS.h in Resources */,
+				451C0D6A1A733F8300A5034F /* SBUnixSignals.h in Resources */,
+				451C0D601A733F8300A5034F /* SBThreadCollection.h in Resources */,
+				451C0D561A733F8300A5034F /* SBQueueItem.h in Resources */,
+				451C0D321A733F8300A5034F /* lldb-forward.h in Resources */,
+				451C0D351A733F8300A5034F /* lldb-versioning.h in Resources */,
+				451C0D401A733F8300A5034F /* SBData.h in Resources */,
+				451C0D6B1A733F8300A5034F /* SBValue.h in Resources */,
+				451C0D331A733F8300A5034F /* lldb-public.h in Resources */,
+				451C0D511A733F8300A5034F /* SBModule.h in Resources */,
+				451C0D4D1A733F8300A5034F /* SBInstruction.h in Resources */,
+				451C0D451A733F8300A5034F /* SBEvent.h in Resources */,
+				451C0D3F1A733F8300A5034F /* SBCompileUnit.h in Resources */,
+				451C0D481A733F8300A5034F /* SBFileSpec.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +847,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45F3CA6A1A73373300BD4352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F3CA921A7338D400BD4352 /* AST.swift in Sources */,
+				45F3CA731A73373300BD4352 /* AppDelegate.swift in Sources */,
+				45768D461A734B9800B2C8CD /* SyntaxOutlineViewController.swift in Sources */,
+				45768D481A734B9F00B2C8CD /* TypeOutlineViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -489,6 +866,11 @@
 			target = 459E8F861A6E92A100EF8DCE /* ClangWrapper */;
 			targetProxy = 4505E5ED1A6F260000C555A6 /* PBXContainerItemProxy */;
 		};
+		45F3CA8E1A73374800BD4352 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 459E8F861A6E92A100EF8DCE /* ClangWrapper */;
+			targetProxy = 45F3CA8D1A73374800BD4352 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -496,6 +878,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				4505E5D71A6F25E600C555A6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		45F3CA761A73373300BD4352 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45F3CA771A73373300BD4352 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -688,6 +1078,44 @@
 			};
 			name = Release;
 		};
+		45F3CA851A73373300BD4352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ClangASTViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks $(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45F3CA861A73373300BD4352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = ClangASTViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks $(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -714,6 +1142,15 @@
 			buildConfigurations = (
 				459E8F9B1A6E92A200EF8DCE /* Debug */,
 				459E8F9C1A6E92A200EF8DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45F3CA891A73373300BD4352 /* Build configuration list for PBXNativeTarget "ClangASTViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F3CA851A73373300BD4352 /* Debug */,
+				45F3CA861A73373300BD4352 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

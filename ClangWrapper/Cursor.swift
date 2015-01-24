@@ -73,7 +73,10 @@ public struct Cursor {
 	public var argumentCursors:[Cursor] {
 		get {
 			let	mk	=	{ i in Cursor(index: self.index, raw: clang_Cursor_getArgument(self.raw, i)) }
-			let	n	=	UInt32(clang_Cursor_getNumArguments(raw))
+			let	r	=	clang_Cursor_getNumArguments(raw)
+			precondition(r != -1)
+			
+			let	n	=	UInt32(r)
 			return	(0..<n).map(mk)
 		}
 	}
