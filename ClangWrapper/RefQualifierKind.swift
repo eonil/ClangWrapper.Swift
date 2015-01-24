@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 public enum RefQualifierKind: UInt32 {
 	///	No ref-qualifier was provided.

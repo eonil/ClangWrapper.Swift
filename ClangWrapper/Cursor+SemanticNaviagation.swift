@@ -6,7 +6,6 @@
 ////  Copyright (c) 2015 Eonil. All rights reserved.
 ////
 //
-//import Foundation
 //
 //extension Cursor {
 //	var semanticParent:Cursor {

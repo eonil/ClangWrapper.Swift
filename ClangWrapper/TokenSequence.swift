@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 //public struct TokenSequence: CollectionType {
 public struct TokenSequence: SequenceType {

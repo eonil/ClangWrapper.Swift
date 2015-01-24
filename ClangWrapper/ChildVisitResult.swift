@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
 
 /**
 * \brief Describes how the traversal of the children of a particular

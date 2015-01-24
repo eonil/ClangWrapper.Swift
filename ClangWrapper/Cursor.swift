@@ -6,9 +6,15 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 public struct Cursor {
+	public var isNull:Bool {
+		get {
+			return	clang_Cursor_isNull(raw) != 0
+		}
+	}
+	
 	///	Returns the translation unit that a cursor originated from.
 	public var translationUnit:TranslationUnit {
 		get {
@@ -23,6 +29,19 @@ public struct Cursor {
 			return	r1.raw
 		}
 	}
+	public var semanticParent:Cursor {
+		get {
+			let	r	=	clang_getCursorSemanticParent(raw)
+			return	Cursor(index: index, raw: r)
+		}
+	}
+	public var lexicalParent:Cursor {
+		get {
+			let	r	=	clang_getCursorLexicalParent(raw)
+			return	Cursor(index: index, raw: r)
+		}
+	}
+	
 	public var kind:CursorKind {
 		get {
 			let	r	=	clang_getCursorKind(raw)
@@ -65,6 +84,12 @@ public struct Cursor {
 		}
 	}
 	
+	public var location:SourceLocation {
+		get {
+			let	r	=	clang_getCursorLocation(raw)
+			return	SourceLocation(raw: r)
+		}
+	}
 	public var extent:SourceRange {
 		get {
 			let	r	=	clang_getCursorExtent(raw);
@@ -78,7 +103,7 @@ public struct Cursor {
 			let	r	=	clang_getCXXAccessSpecifier(raw)
 			return	ClangWrapper.CXXAccessSpecifier(raw: r)
 		}
-	}
+	}	
 
 	////
 	

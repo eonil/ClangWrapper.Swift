@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 
 public struct TranslationUnit: TrackableRemoteObjectProxy {
@@ -15,6 +15,9 @@ public struct TranslationUnit: TrackableRemoteObjectProxy {
 		clang_disposeTranslationUnit(raw)
 		debugLog("clang_disposeTranslationUnit")
 	}
+	
+	///	Eonil:
+	///	`TranslationUnit.cursor.spelling` returns file path of the unit.
 	public var cursor:Cursor {
 		get {
 			return	Cursor(index: index, raw: clang_getTranslationUnitCursor(raw))

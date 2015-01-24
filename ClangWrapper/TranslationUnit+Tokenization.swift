@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 public extension TranslationUnit {
 	public func tokenize(range:SourceRange) -> TokenSequence {

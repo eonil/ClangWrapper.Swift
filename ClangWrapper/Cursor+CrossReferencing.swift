@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
 
 public extension Cursor {
 	///	Retrieve a name for the entity referenced by this cursor.

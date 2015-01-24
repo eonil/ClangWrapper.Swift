@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 public extension Cursor {
 	///	This copied all direct children cursors into an array.

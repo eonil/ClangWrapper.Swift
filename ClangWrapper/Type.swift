@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Eonil. All rights reserved.
 //
 
-import Foundation
+
 
 public struct Type: Equatable {
 	public var spelling:String {
@@ -90,10 +90,10 @@ public struct Type: Equatable {
 		self.raw	=	raw
 	}
 }
-
 public func ==(left:Type, right:Type) -> Bool {
 	return	clang_equalTypes(left.raw, right.raw) != 0
 }
+
 
 
 
@@ -118,18 +118,18 @@ extension Type: Printable {
 
 
 
-private func mapPrimitiveTypeName(t:TypeKind) -> String? {
-	switch t {
-	case .Void:		return	"void"
-	case .Bool:		return	"bool"
-	case .Char_S:	return	"char"
-	case .Char_U:	return	"unsigned char"
-	case .Int:		return	"int"
-	case .Long:		return	"long"
-	case .LongLong:	return	"long long"
-	default:		return	nil
-	}
-}
+//private func mapPrimitiveTypeName(t:TypeKind) -> String? {
+//	switch t {
+//	case .Void:		return	"void"
+//	case .Bool:		return	"bool"
+//	case .Char_S:	return	"char"
+//	case .Char_U:	return	"unsigned char"
+//	case .Int:		return	"int"
+//	case .Long:		return	"long"
+//	case .LongLong:	return	"long long"
+//	default:		return	nil
+//	}
+//}
 
 
 

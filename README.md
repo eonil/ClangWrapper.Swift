@@ -104,7 +104,7 @@ Design Choices
 	not allocate resources internally.
 -	For your safety and convenience, all proxy objects will be tracked and `dispose`d when `Index` deinitializes
 	if it has not been disposed. 
-
+-	Enums constant values are copied from `libclang` headers if they're explicitly defined.
 
 
 
