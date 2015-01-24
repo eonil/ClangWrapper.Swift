@@ -95,14 +95,14 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 	}
 	func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
 		let	t	=	NSTextField()
-		let	m	=	NSImageView()
+//		let	m	=	NSImageView()
 		let	v	=	NSTableCellView()
 		
 		v.textField	=	t
-		v.imageView	=	m
+//		v.imageView	=	m
 		
 		v.addSubview(t)
-		v.addSubview(m)
+//		v.addSubview(m)
 		
 		////
 		

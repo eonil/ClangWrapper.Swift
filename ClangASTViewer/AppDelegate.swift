@@ -22,18 +22,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		var	ps	=	[] as [String]
 		let	p	=	NSBundle.mainBundle().resourcePath!
-		for p1 in NSFileManager.defaultManager().enumeratorAtPath(p)!.allObjects {
-			if p1.pathExtension == "h" {
-				let	p2	=	p.stringByAppendingPathComponent(p1 as String)
-				ps.append(p2)
-			}
-		}
+		let	p1	=	p + "/LLDB.framework/Headers/LLDB.h"
 		
-		let	args	=	["-std=c++11"]
-		let	tus		=	ps.map({ p in self.idx.parseTranslationUnit(p, commandLineArguments: args) })
+		let	args	=	["-std=c++11", "-F\(p)"]
+		let	tu		=	self.idx.parseTranslationUnit(p1, commandLineArguments: args)
 		
 		let	root	=	ASTRootNode()
-		tus.map({ tu in TranslationUnitNode(tu) }).map(root.translationUnitChildNodes.append)
+		root.translationUnitChildNodes.append(TranslationUnitNode(tu))
 		
 		mainSplit.syntaxTree.syntaxOutline.rootNodeRepresentation	=	root
 		mainSplit.syntaxTree.syntaxOutline.outlineView.reloadData()

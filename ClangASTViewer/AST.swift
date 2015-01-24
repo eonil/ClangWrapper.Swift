@@ -57,7 +57,7 @@ class TranslationUnitNode: ASTNode {
 		cursorNode				=	CursorNode(translationUnitData.cursor, "[C] cursor")
 		
 		super.init()
-		self.name	=	"[U] (TranslationUnit)"
+		self.name	=	"[U] \(translationUnitData.cursor.spelling.lastPathComponent)"
 	}
 }
 
