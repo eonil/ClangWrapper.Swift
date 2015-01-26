@@ -32,6 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		mainSplit.syntaxTree.syntaxOutline.rootNodeRepresentation	=	root
 		mainSplit.syntaxTree.syntaxOutline.outlineView.reloadData()
+		
+		mainSplit.syntaxTree.becomeFirstResponder()
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {

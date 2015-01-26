@@ -17,6 +17,7 @@ enum ASTNodeField {
 	case Spelling
 	case Extent
 	case Kind
+//	case Mangling
 	case Description
 }
 
@@ -48,6 +49,26 @@ class ASTRootNode: ASTNode {
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TranslationUnitNode: ASTNode {
 	let	translationUnitData:TranslationUnit
 	let	cursorNode:CursorNode
@@ -60,6 +81,29 @@ class TranslationUnitNode: ASTNode {
 		self.name	=	"[U] \(translationUnitData.cursor.spelling.lastPathComponent)"
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CursorNode: ASTNode {
 	let	cursorData:Cursor
@@ -83,6 +127,14 @@ class CursorNode: ASTNode {
 			
 			////
 			
+			if data.spelling == "ReadRawData" {
+				println(data.sourceCode)
+				println(data.children.count)
+				println(data.visitChildrenWithBlock({ (cursor, parent) -> ChildVisitResult in
+					println(cursor)
+					return	ChildVisitResult.Recurse
+				}))
+			}
 			for i in 0..<data.children.count {
 				let	c1		=	data.children[i]
 				let	cn1		=	CursorNode(c1, "[C] \(c1.spelling)")
@@ -105,11 +157,28 @@ class CursorNode: ASTNode {
 		case .Spelling:		return	cursorData.spelling
 		case .Extent:		return	cursorData.extent.description
 		case .Kind:			return	cursorData.kind.description
+//		case .Mangling:		return	cursorData.mangling
 		case .Description:	return	cursorData.description
 		default:			return	""
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,11 +234,32 @@ class TypeNode: ASTNode {
 		switch f {
 		case .Spelling:		return	typeData.spelling
 		case .Kind:			return	typeData.kind.description
+//		case .Mangling:		return	""
 		case .Description:	return	typeData.description
 		default:			return	""
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class CursorLinkNode: ASTNode {
@@ -186,11 +276,21 @@ class CursorLinkNode: ASTNode {
 		case .Spelling:		return	cursorData.spelling
 		case .Extent:		return	cursorData.extent.description
 		case .Kind:			return	cursorData.kind.description
+//		case .Mangling:		return	cursorData.mangling
 		case .Description:	return	cursorData.description
 		default:			return	""
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
 
 
 

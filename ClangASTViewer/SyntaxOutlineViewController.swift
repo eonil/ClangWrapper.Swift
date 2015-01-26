@@ -94,15 +94,28 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 		return	self.outlineView(outlineView, numberOfChildrenOfItem: item) > 0
 	}
 	func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
-		let	t	=	NSTextField()
-//		let	m	=	NSImageView()
-		let	v	=	NSTableCellView()
-		
-		v.textField	=	t
-//		v.imageView	=	m
-		
-		v.addSubview(t)
-//		v.addSubview(m)
+		func getView() -> NSTableCellView {
+			if let v1:AnyObject = outlineView.makeViewWithIdentifier(tableColumn!.identifier, owner: nil) {
+				return	v1 as NSTableCellView
+			}
+			
+			let	t	=	NSTextField()
+//			let	m	=	NSImageView()
+			let	v	=	NSTableCellView()
+			
+			v.textField	=	t
+//			v.imageView	=	m
+			
+			v.addSubview(t)
+//			v.addSubview(m)
+
+			t.editable			=	false
+			t.bordered			=	false
+			t.lineBreakMode		=	NSLineBreakMode.ByTruncatingTail
+			t.backgroundColor	=	NSColor.clearColor()
+
+			return	v
+		}
 		
 		////
 		
@@ -125,11 +138,10 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 			fatalError()
 		}
 		
-		t.editable			=	false
-		t.bordered			=	false
-		t.lineBreakMode		=	NSLineBreakMode.ByTruncatingTail
-		t.backgroundColor	=	NSColor.clearColor()
-		t.stringValue		=	selectText(item)
+		////
+		
+		let	v						=	getView()
+		v.textField!.stringValue	=	selectText(item)
 		
 		return	v
 	}

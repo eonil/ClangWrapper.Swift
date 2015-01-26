@@ -27,19 +27,6 @@ public func != (left:Cursor, right:Cursor) -> Bool {
 
 
 
-extension Cursor: Hashable {
-	public var hashValue:Int {
-		get {
-			return	Int(bitPattern: UInt(clang_hashCursor(raw)))
-		}
-	}
-}
-
-
-
-
-
-
 
 
 
