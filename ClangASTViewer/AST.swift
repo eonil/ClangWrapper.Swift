@@ -119,11 +119,12 @@ class CursorNode: ASTNode {
 	struct LazyData {
 		let	typeNode:TypeNode
 		let	childCursorNodes:[CursorNode]		=	[]
+		
+		let	resultTypeNode:TypeNode?
 		let	argumentCursorNodes:[CursorNode]	=	[]
 		
 		init(_ data:Cursor) {			
-			self.typeNode			=	TypeNode(data.type)
-			typeNode.name			=	"[T] type"
+			self.typeNode			=	TypeNode(data.type, "[T] type")
 			
 			////
 			
@@ -140,6 +141,15 @@ class CursorNode: ASTNode {
 				let	cn1		=	CursorNode(c1, "[C] \(c1.spelling)")
 //				cn1.name	=	"children[\(i)] \(c1.spelling)"
 				childCursorNodes.append(cn1)
+			}
+			
+			if data.kind == CursorKind.FunctionDecl || data.kind == CursorKind.CXXMethod {
+				resultTypeNode			=	TypeNode(data.resultType, "resultType")
+				for i in 0..<data.argumentCursors.count {
+					let	c	=	data.argumentCursors[i]
+					let	n	=	CursorNode(c, "argument[\(i)]")
+					argumentCursorNodes.append(n)
+				}
 			}
 			
 //			if data.kind == CursorKind.FunctionDecl || data.kind == CursorKind.CXXMethod {
@@ -187,7 +197,7 @@ class TypeNode: ASTNode {
 	let	typeData:Type
 	lazy var lazyData:LazyData	=	LazyData(self.typeData)
 	
-	init(_ data:Type, _ name:String = "") {
+	init(_ data:Type, _ name:String) {
 		self.typeData					=	data
 		
 		super.init()
@@ -355,7 +365,14 @@ extension CursorNode: ASTNodeNavigation {
 	}
 	var	allChildNodes:[ASTNodeNavigation] {
 		get {
-			return	[lazyData.typeNode] as [ASTNodeNavigation] + lazyData.childCursorNodes as [ASTNodeNavigation] + lazyData.argumentCursorNodes as [ASTNodeNavigation]
+			var	a	=	[] as [ASTNodeNavigation]
+			a.append(lazyData.typeNode)
+			lazyData.childCursorNodes.map(a.append)
+			if let n = lazyData.resultTypeNode {
+				a.append(n)
+			}
+			lazyData.argumentCursorNodes.map(a.append)
+			return	a
 		}
 	}
 }

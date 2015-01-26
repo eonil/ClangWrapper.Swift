@@ -43,9 +43,17 @@ public extension Cursor {
 			return	Int(r)
 		}
 	}
-	///	Composition of `clang_Cursor_getArgument` and `clang_Cursor_getNumArguments`.
-	///	`clang_Cursor_getArgument`: Retrieve the number of non-variadic arguments associated with a given cursor.
-	///	`clang_Cursor_getNumArguments`: Retrieve the argument cursor of a function or method.
+	
+	///	Composition of `clang_Cursor_getNumArguments` and `clang_Cursor_getArgument`.
+	///	Unlike C API, this propert will crash if cursor does not provide argument information.
+	///
+	///	`clang_Cursor_getNumArguments`:
+	///	Retrieve the number of non-variadic arguments associated with a given cursor.
+	///	The number of arguments can be determined for calls as well as for declarations of functions or methods. For other cursors -1 is returned.
+	///
+	///	`clang_Cursor_getArgument`:
+	///	Retrieve the argument cursor of a function or method.
+	///	The argument cursor can be determined for calls as well as for declarations of functions or methods. For other cursors and for invalid indices, an invalid cursor is returned.
 	public var argumentCursors:[Cursor] {
 		get {
 			let	mk	=	{ i in Cursor(index: self.index, raw: clang_Cursor_getArgument(self.raw, i)) }
@@ -56,6 +64,9 @@ public extension Cursor {
 			return	(0..<n).map(mk)
 		}
 	}
+	
+	///	Retrieve the return type associated with a function type.
+	///	If a non-function type is passed in, an invalid type is returned.
 	public var resultType:Type {
 		get {
 			let	r	=	clang_getCursorResultType(raw)
@@ -80,6 +91,8 @@ public extension Cursor {
 	}
 	
 	///	Composition of `clang_getNumOverloadedDecls` and `clang_getOverloadedDecl`.
+	///	This returns an empty array if nothing provided.
+	///
 	///	`clang_getNumOverloadedDecls`: Determine the number of overloaded declarations referenced by a CXCursor_OverloadedDeclRef cursor.
 	///	`clang_getOverloadedDecl`: Retrieve a cursor for one of the overloaded declarations referenced by a CXCursor_OverloadedDeclRef cursor.
 	public var overloadedDeclaraions:[Cursor] {

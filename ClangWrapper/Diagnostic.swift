@@ -43,3 +43,10 @@ public struct Diagnostic: TrackableRemoteObjectProxy {
 	}
 }
 
+extension Diagnostic: Printable {
+	public var description:String {
+		get {
+		return	spelling
+		}
+	}
+}
