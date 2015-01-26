@@ -35,6 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		let	tu		=	self.idx.parseTranslationUnit(p1, commandLineArguments: args)
 		
 		println(tu.diagnostics)
+		precondition(tu.diagnostics.count == 0)
 		
 		////
 		

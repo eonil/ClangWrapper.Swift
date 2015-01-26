@@ -6,7 +6,7 @@ Hoon H.
 
 
 
-Provides a set of wrapper classes around `libclang` library API. (C API, not C++ API)
+Provides a set of wrappers around `libclang` library API. (C API, not C++ API)
 
 
 
@@ -58,6 +58,15 @@ If you want to force specific language mode, use this method.
 
 	let	transunit	=	idx.parseTranslationUnit(path, commandLineArguments: ["-std=c++11"])
 
+Usually compiler needs more parameters to locate proper platform support. Here's an example.
+
+	let	args	=	[
+		"-x", "c++",
+		"-std=c++11",
+		"-stdlib=libc++",
+		"-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk",
+		"-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+	]
 
 
 
@@ -88,8 +97,10 @@ Cautions
 -	This framework is using Clang's C API that is intended to be stable.
 	Linking to Xcode bonary should be fine.
 
--	This framework does not fully cover C API (yet).
+-	This framework does not fully cover C API (yet? well...).
 
+-	Compiler assumes some missing types to `int` silently, and I know no good way to determine this is missing
+	or not. Anyway, `TranslationUnit` provides `diagnostics`, so always check it for any issues before you proceed.
 
 
 
@@ -102,10 +113,11 @@ Design Choices
 -	Uses C-like tree (unique-ownership) manual resource management. That means you need to call `dispose` 
 	manually on them to free up allocated resources. If an object does not support `dispose`, it means it does 
 	not allocate resources internally.
--	For your safety and convenience, all proxy objects will be tracked and `dispose`d when `Index` deinitializes
-	if it has not been disposed. 
+-	For your safety and convenience, all proxy objects are tracked and `dispose`d by `Index` class when it
+	deinitializes if the proxy objects has not been disposed. 
 -	Enums constant values are copied from `libclang` headers if they're explicitly defined.
-
+-	Using of C++ API has been avoided becuase it's a fast moving target and does not seem to be stable for at 
+	least in a few years. Maybe forever.
 
 
 
