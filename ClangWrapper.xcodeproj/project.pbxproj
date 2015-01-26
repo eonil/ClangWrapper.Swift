@@ -22,7 +22,6 @@
 		452D03321A6E9CB900F88F4E /* Documentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032B1A6E9CB900F88F4E /* Documentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D03331A6E9CB900F88F4E /* Index.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032C1A6E9CB900F88F4E /* Index.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D03341A6E9CB900F88F4E /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032D1A6E9CB900F88F4E /* Platform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		452D03871A6EA01F00F88F4E /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D03861A6EA01F00F88F4E /* libclang.dylib */; };
 		45494C231A6F4F2800859DDF /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514408E1A6F351100242EA3 /* Cursor.swift */; };
 		45494C241A6F4F2800859DDF /* Cursor+Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440921A6F36B300242EA3 /* Cursor+Printable.swift */; };
 		45494C251A6F4F2800859DDF /* Cursor+Iteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451440901A6F351D00242EA3 /* Cursor+Iteration.swift */; };
@@ -63,13 +62,14 @@
 		45C7054F1A6F660800CA4E7B /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7054E1A6F660800CA4E7B /* Type.swift */; };
 		45C705511A6F66D300CA4E7B /* TypeKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705501A6F66D300CA4E7B /* TypeKind.swift */; };
 		45C705531A6F684700CA4E7B /* TypeKind+Stringification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */; };
+		45D16BF91A75F967009D1A55 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D16BF81A75F967009D1A55 /* libclang.dylib */; };
+		45D16BFA1A75F967009D1A55 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D16BF81A75F967009D1A55 /* libclang.dylib */; };
 		45E76CF91A739E8D00DFD83A /* Cursor+NameMangling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E76CF81A739E8D00DFD83A /* Cursor+NameMangling.swift */; };
 		45F3CA731A73373300BD4352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3CA721A73373300BD4352 /* AppDelegate.swift */; };
 		45F3CA751A73373300BD4352 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F3CA741A73373300BD4352 /* Images.xcassets */; };
 		45F3CA781A73373300BD4352 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45F3CA761A73373300BD4352 /* MainMenu.xib */; };
 		45F3CA8B1A73374800BD4352 /* ClangWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; };
 		45F3CA8C1A73374800BD4352 /* ClangWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		45F3CA901A73374D00BD4352 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D03861A6EA01F00F88F4E /* libclang.dylib */; };
 		45F3CA921A7338D400BD4352 /* AST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3CA911A7338D400BD4352 /* AST.swift */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +187,7 @@
 		45C7054E1A6F660800CA4E7B /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		45C705501A6F66D300CA4E7B /* TypeKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeKind.swift; sourceTree = "<group>"; };
 		45C705521A6F684700CA4E7B /* TypeKind+Stringification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TypeKind+Stringification.swift"; sourceTree = "<group>"; };
+		45D16BF81A75F967009D1A55 /* libclang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libclang.dylib; path = ../../../Unix/homebrew/Cellar/llvm/HEAD/lib/libclang.dylib; sourceTree = "<group>"; };
 		45E76CF81A739E8D00DFD83A /* Cursor+NameMangling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+NameMangling.swift"; sourceTree = "<group>"; };
 		45F3CA6E1A73373300BD4352 /* ClangASTViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClangASTViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F3CA711A73373300BD4352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,7 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				452D03871A6EA01F00F88F4E /* libclang.dylib in Frameworks */,
+				45D16BF91A75F967009D1A55 /* libclang.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +219,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D16BFA1A75F967009D1A55 /* libclang.dylib in Frameworks */,
 				45F3CA8B1A73374800BD4352 /* ClangWrapper.framework in Frameworks */,
-				45F3CA901A73374D00BD4352 /* libclang.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +295,22 @@
 			path = "clang-c";
 			sourceTree = "<group>";
 		};
+		458260301A75F8450023FF07 /* (from Homebrew) */ = {
+			isa = PBXGroup;
+			children = (
+				45D16BF81A75F967009D1A55 /* libclang.dylib */,
+			);
+			name = "(from Homebrew)";
+			sourceTree = "<group>";
+		};
+		458260311A75F8520023FF07 /* (from Xcode) */ = {
+			isa = PBXGroup;
+			children = (
+				452D03861A6EA01F00F88F4E /* libclang.dylib */,
+			);
+			name = "(from Xcode)";
+			sourceTree = "<group>";
+		};
 		459E8F6F1A6E928100EF8DCE = {
 			isa = PBXGroup;
 			children = (
@@ -302,7 +319,8 @@
 				459E8F881A6E92A100EF8DCE /* ClangWrapper */,
 				4505E5CF1A6F25E600C555A6 /* Workbench */,
 				4505E5E01A6F25E600C555A6 /* WorkbenchTests */,
-				452D03861A6EA01F00F88F4E /* libclang.dylib */,
+				458260311A75F8520023FF07 /* (from Xcode) */,
+				458260301A75F8450023FF07 /* (from Homebrew) */,
 				45F3CA6F1A73373300BD4352 /* ClangASTViewer */,
 				459E8F791A6E928100EF8DCE /* Products */,
 				4505E6041A6F269200C555A6 /* Workbench copy-Info.plist */,
@@ -776,7 +794,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"\"$SRCROOT\"/ClangWrapper/include",
 				);
 				INFOPLIST_FILE = ClangWrapper/Info.plist;
@@ -784,9 +802,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks $(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib,
 					"$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib",
-					/Users/Eonil/Unix/homebrew/Cellar/llvm/HEAD/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -811,7 +827,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "ClangWrapperBuildLocal=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"\"$SRCROOT\"/ClangWrapper/include",
 				);
 				INFOPLIST_FILE = ClangWrapper/Info.plist;
@@ -819,9 +835,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks $(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib,
 					"$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib",
-					/Users/Eonil/Unix/homebrew/Cellar/llvm/HEAD/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -837,10 +851,6 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ClangASTViewer/SampleData",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -862,10 +872,6 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ClangASTViewer/SampleData",
-				);
 				INFOPLIST_FILE = ClangASTViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks $(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
 				LIBRARY_SEARCH_PATHS = (

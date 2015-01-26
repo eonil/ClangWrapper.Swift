@@ -12,6 +12,8 @@
 	<dict>
 		<key>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</key>
 		<string>https://github.com/Eonil/ClangWrapper.Swift.git</string>
+		<key>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</key>
+		<string>https://github.com/Homebrew/homebrew.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ClangWrapperOnly.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</key>
 		<string>..</string>
+		<key>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</key>
+		<string>../../Unix/homebrew</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Eonil/ClangWrapper.Swift.git</string>
@@ -35,6 +39,14 @@
 			<string>8FCE9684CD523B6697D2B9630EF1DB032F46FA7C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ClangWrapper</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>homebrew</string>
 		</dict>
 	</array>
 </dict>

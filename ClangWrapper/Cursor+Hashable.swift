@@ -9,14 +9,5 @@
 import Foundation
 
 
-extension Cursor: Hashable {
-	public var hashValue:Int {
-		get {
-			return	Int(bitPattern: UInt(clang_hashCursor(raw)))
-		}
-	}
-}
 
-
-
-
+//	Content moved to `Cursor+Equatable.swift` file due to compiler bug that emits duplicated symbols.
