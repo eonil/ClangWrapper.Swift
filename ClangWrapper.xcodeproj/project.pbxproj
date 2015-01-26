@@ -35,8 +35,8 @@
 		45494C2D1A6F4F2800859DDF /* CCharArrayOfCCharArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */; };
 		45494C301A6F51DE00859DDF /* Sample2.h in Resources */ = {isa = PBXBuildFile; fileRef = 45494C2E1A6F51CA00859DDF /* Sample2.h */; };
 		45494C381A6F5CB300859DDF /* CXXAccessSpecifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45494C371A6F5CB300859DDF /* CXXAccessSpecifier.swift */; };
+		454C79E21A76334600AA966C /* Cursor+TypeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C79E11A76334600AA966C /* Cursor+TypeInformation.swift */; };
 		456A0FA51A6F78F700A1DF5B /* Cursor+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456A0FA41A6F78F700A1DF5B /* Cursor+Equatable.swift */; };
-		456A0FA71A6F79F700A1DF5B /* Cursor+SemanticNaviagation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456A0FA61A6F79F700A1DF5B /* Cursor+SemanticNaviagation.swift */; };
 		456A0FA91A6F7E3900A1DF5B /* Cursor+CrossReferencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456A0FA81A6F7E3900A1DF5B /* Cursor+CrossReferencing.swift */; };
 		456A0FAF1A6F7FCF00A1DF5B /* CursorKind+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456A0FAE1A6F7FCF00A1DF5B /* CursorKind+Query.swift */; };
 		456A0FB11A6F800200A1DF5B /* CursorKind+RawConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456A0FB01A6F800200A1DF5B /* CursorKind+RawConversion.swift */; };
@@ -156,10 +156,10 @@
 		452D03931A6EB26900F88F4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45494C2E1A6F51CA00859DDF /* Sample2.h */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = Sample2.h; sourceTree = "<group>"; };
 		45494C371A6F5CB300859DDF /* CXXAccessSpecifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXXAccessSpecifier.swift; sourceTree = "<group>"; };
+		454C79E11A76334600AA966C /* Cursor+TypeInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+TypeInformation.swift"; sourceTree = "<group>"; };
 		455E97761A6F3D2700D38FF9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		455E98021A6F4D8E00D38FF9 /* CCharArrayOfCCharArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCharArrayOfCCharArray.swift; sourceTree = "<group>"; };
 		456A0FA41A6F78F700A1DF5B /* Cursor+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+Equatable.swift"; sourceTree = "<group>"; };
-		456A0FA61A6F79F700A1DF5B /* Cursor+SemanticNaviagation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+SemanticNaviagation.swift"; sourceTree = "<group>"; };
 		456A0FA81A6F7E3900A1DF5B /* Cursor+CrossReferencing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+CrossReferencing.swift"; sourceTree = "<group>"; };
 		456A0FAE1A6F7FCF00A1DF5B /* CursorKind+Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CursorKind+Query.swift"; sourceTree = "<group>"; };
 		456A0FB01A6F800200A1DF5B /* CursorKind+RawConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CursorKind+RawConversion.swift"; sourceTree = "<group>"; };
@@ -350,10 +350,10 @@
 				4576193D1A6FA992004479B6 /* Diagnostic.swift */,
 				4576193F1A6FA9A0004479B6 /* File.swift */,
 				4514408E1A6F351100242EA3 /* Cursor.swift */,
+				454C79E11A76334600AA966C /* Cursor+TypeInformation.swift */,
 				4582602D1A75F01C0023FF07 /* Cursor+Hashable.swift */,
 				456A0FA41A6F78F700A1DF5B /* Cursor+Equatable.swift */,
 				456A0FA81A6F7E3900A1DF5B /* Cursor+CrossReferencing.swift */,
-				456A0FA61A6F79F700A1DF5B /* Cursor+SemanticNaviagation.swift */,
 				451440921A6F36B300242EA3 /* Cursor+Printable.swift */,
 				451440901A6F351D00242EA3 /* Cursor+Iteration.swift */,
 				451EB48E1A723C59002E7E77 /* Cursor+CPP.swift */,
@@ -605,9 +605,9 @@
 				45494C241A6F4F2800859DDF /* Cursor+Printable.swift in Sources */,
 				456A0FB91A6F934B00A1DF5B /* TokenKind.swift in Sources */,
 				45494C251A6F4F2800859DDF /* Cursor+Iteration.swift in Sources */,
+				454C79E21A76334600AA966C /* Cursor+TypeInformation.swift in Sources */,
 				456A0FB51A6F8EDB00A1DF5B /* Token.swift in Sources */,
 				456A0FAF1A6F7FCF00A1DF5B /* CursorKind+Query.swift in Sources */,
-				456A0FA71A6F79F700A1DF5B /* Cursor+SemanticNaviagation.swift in Sources */,
 				456A0FB11A6F800200A1DF5B /* CursorKind+RawConversion.swift in Sources */,
 				45494C2D1A6F4F2800859DDF /* CCharArrayOfCCharArray.swift in Sources */,
 				45494C231A6F4F2800859DDF /* Cursor.swift in Sources */,

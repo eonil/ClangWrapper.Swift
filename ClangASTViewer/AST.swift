@@ -195,6 +195,7 @@ class TypeNode: ASTNode {
 	}
 	
 	struct LazyData {
+		let	canonicalTypeNode:TypeNode
 		let	declarationCursorLinkNode:CursorLinkNode
 		
 		///	For function types.
@@ -203,10 +204,12 @@ class TypeNode: ASTNode {
 		
 		///	For point/reference types.
 		let	pointeeTypeNode:TypeNode?
+		
 			
 		init(_ data:Type) {
 			let	invalid	=	data.kind == TypeKind.Invalid
 			
+			canonicalTypeNode			=	TypeNode(data.canonicalType, "[T] canonicalType")
 			declarationCursorLinkNode	=	CursorLinkNode(data.declaration, "[@C] declaration")
 			
 			if data.kind == TypeKind.FunctionProto {
@@ -366,6 +369,7 @@ extension TypeNode: ASTNodeNavigation {
 	var	allChildNodes:[ASTNodeNavigation] {
 		get {
 			var	ns	=	[] as [ASTNodeNavigation]
+//			ns.append(lazyData.canonicalTypeNode)
 			ns.append(lazyData.declarationCursorLinkNode)
 			if let n = lazyData.resultTypeNode {
 				ns.append(n)
