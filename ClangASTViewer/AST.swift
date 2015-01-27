@@ -29,6 +29,9 @@ class ASTNode {
 	func textForField(f:ASTNodeField) -> String {
 		return	""
 	}
+	func shouldDisplayAsInactive() -> Bool {
+		return	false
+	}
 }
 
 
@@ -118,13 +121,15 @@ class CursorNode: ASTNode {
 	
 	struct LazyData {
 		let	typeNode:TypeNode
+		let	typedefDeclarationUnderlyingTypeNode:TypeNode
 		let	childCursorNodes:[CursorNode]		=	[]
 		
 		let	resultTypeNode:TypeNode?
 		let	argumentCursorNodes:[CursorNode]	=	[]
 		
 		init(_ data:Cursor) {			
-			self.typeNode			=	TypeNode(data.type, "[T] type")
+			self.typeNode								=	TypeNode(data.type, "[T] type")
+			self.typedefDeclarationUnderlyingTypeNode	=	TypeNode(data.typedefDeclarationUnderlyingType, "[T] typedefDeclUnderlyingType")
 			
 			////
 			
@@ -172,6 +177,9 @@ class CursorNode: ASTNode {
 		default:			return	""
 		}
 	}
+	override func shouldDisplayAsInactive() -> Bool {
+		return	cursorData.isNull
+	}
 }
 
 
@@ -208,7 +216,7 @@ class TypeNode: ASTNode {
 		let	canonicalTypeNode:TypeNode
 		let	declarationCursorLinkNode:CursorLinkNode
 		
-		///	For function types.
+		///	For function-like types. 
 		let	resultTypeNode:TypeNode?
 		let	argumentTypeNodes:[TypeNode]?
 		
@@ -222,15 +230,22 @@ class TypeNode: ASTNode {
 			canonicalTypeNode			=	TypeNode(data.canonicalType, "[T] canonicalType")
 			declarationCursorLinkNode	=	CursorLinkNode(data.declaration, "[@C] declaration")
 			
-			if data.kind == TypeKind.FunctionProto {
-				resultTypeNode		=	invalid ? nil : TypeNode(data.resultType, "[T] resultType")
-				argumentTypeNodes	=	[]
-				println(data.kind.description)
-				for i in 0..<data.argumentTypes.count {
-					let	t	=	data.argumentTypes[i]
-					argumentTypeNodes!.append(TypeNode(t,"[T] argumentTypes[\(i)]"))
-				}
+			if data.kind == TypeKind.Invalid {
+				return
 			}
+			
+			////
+			
+//			if data.kind == TypeKind.FunctionProto || data.kind == TypeKind.FunctionNoProto || data.kind == TypeKind.Unexposed {
+				resultTypeNode		=	TypeNode(data.resultType, "[T] resultType")
+				if let args = data.argumentTypes {
+					argumentTypeNodes	=	[]
+					for i in 0..<args.count {
+						let	t	=	args[i]
+						argumentTypeNodes!.append(TypeNode(t,"[T] argumentTypes[\(i)]"))
+					}
+				}
+//			}
 			
 			if data.kind == TypeKind.Pointer {
 				pointeeTypeNode	=	TypeNode(data.pointeeType, "[T] pointeeType")
@@ -251,6 +266,9 @@ class TypeNode: ASTNode {
 		case .Description:	return	typeData.description
 		default:			return	""
 		}
+	}
+	override func shouldDisplayAsInactive() -> Bool {
+		return	typeData.kind == TypeKind.Invalid
 	}
 }
 
@@ -293,6 +311,9 @@ class CursorLinkNode: ASTNode {
 		case .Description:	return	cursorData.description
 		default:			return	""
 		}
+	}
+	override func shouldDisplayAsInactive() -> Bool {
+		return	cursorData.isNull
 	}
 }
 
@@ -367,6 +388,7 @@ extension CursorNode: ASTNodeNavigation {
 		get {
 			var	a	=	[] as [ASTNodeNavigation]
 			a.append(lazyData.typeNode)
+			a.append(lazyData.typedefDeclarationUnderlyingTypeNode)
 			lazyData.childCursorNodes.map(a.append)
 			if let n = lazyData.resultTypeNode {
 				a.append(n)

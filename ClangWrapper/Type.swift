@@ -45,7 +45,7 @@ public struct Type: Equatable {
 			return	Type(index: index, raw: clang_getResultType(raw))
 		}
 	}
-	public var argumentTypes:[Type] {
+	public var argumentTypes:[Type]? {
 		get {
 			precondition(self.kind != TypeKind.Invalid)
 			
@@ -55,7 +55,10 @@ public struct Type: Equatable {
 				return	t
 			}
 			let	r	=	clang_getNumArgTypes(raw)
-			precondition(r != -1)
+			if r == -1 {
+				return	nil
+			}
+//			precondition(r != -1, "This type `\(self)` of kind `\(self.kind)` does not support argument types.")
 			
 			let	n	=	UInt32(r)
 			return	(0..<n).map(argtype)

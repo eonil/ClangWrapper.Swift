@@ -137,11 +137,22 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 			}
 			fatalError()
 		}
+		func selectForeColor(item:AnyObject) -> NSColor {
+			if let n = item as? ASTNode {
+//				if n.shouldDisplayAsInactive() {
+//					return	NSColor.disabledControlTextColor()
+//				} else {
+					return	NSColor.controlTextColor()
+//				}
+			}
+			fatalError()
+		}
 		
 		////
 		
 		let	v						=	getView()
 		v.textField!.stringValue	=	selectText(item)
+		v.textField!.textColor		=	selectForeColor(item)
 		
 		return	v
 	}
