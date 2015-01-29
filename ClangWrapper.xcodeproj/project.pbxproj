@@ -53,7 +53,6 @@
 		4576193E1A6FA992004479B6 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193D1A6FA992004479B6 /* Diagnostic.swift */; };
 		457619401A6FA9A0004479B6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576193F1A6FA9A0004479B6 /* File.swift */; };
 		45768D461A734B9800B2C8CD /* SyntaxOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45768D451A734B9800B2C8CD /* SyntaxOutlineViewController.swift */; };
-		45768D481A734B9F00B2C8CD /* TypeOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45768D471A734B9F00B2C8CD /* TypeOutlineViewController.swift */; };
 		45768D4C1A73793000B2C8CD /* LLDB.framework in Resources */ = {isa = PBXBuildFile; fileRef = 45768D4A1A73792400B2C8CD /* LLDB.framework */; };
 		4582602E1A75F01C0023FF07 /* Cursor+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582602D1A75F01C0023FF07 /* Cursor+Hashable.swift */; };
 		459E8F8C1A6E92A100EF8DCE /* ClangWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 459E8F8B1A6E92A100EF8DCE /* ClangWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -176,7 +175,6 @@
 		4576193D1A6FA992004479B6 /* Diagnostic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		4576193F1A6FA9A0004479B6 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		45768D451A734B9800B2C8CD /* SyntaxOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxOutlineViewController.swift; sourceTree = "<group>"; };
-		45768D471A734B9F00B2C8CD /* TypeOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOutlineViewController.swift; sourceTree = "<group>"; };
 		45768D4A1A73792400B2C8CD /* LLDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LLDB.framework; sourceTree = "<group>"; };
 		4582602D1A75F01C0023FF07 /* Cursor+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+Hashable.swift"; sourceTree = "<group>"; };
 		459E8F871A6E92A100EF8DCE /* ClangWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,7 +396,6 @@
 				451C0CEF1A733F7200A5034F /* SampleData */,
 				45F3CA721A73373300BD4352 /* AppDelegate.swift */,
 				45768D451A734B9800B2C8CD /* SyntaxOutlineViewController.swift */,
-				45768D471A734B9F00B2C8CD /* TypeOutlineViewController.swift */,
 				45F3CA911A7338D400BD4352 /* AST.swift */,
 				45F3CA741A73373300BD4352 /* Images.xcassets */,
 				45F3CA761A73373300BD4352 /* MainMenu.xib */,
@@ -624,7 +621,6 @@
 				45F3CA921A7338D400BD4352 /* AST.swift in Sources */,
 				45F3CA731A73373300BD4352 /* AppDelegate.swift in Sources */,
 				45768D461A734B9800B2C8CD /* SyntaxOutlineViewController.swift in Sources */,
-				45768D481A734B9F00B2C8CD /* TypeOutlineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

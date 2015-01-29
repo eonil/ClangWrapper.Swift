@@ -216,6 +216,11 @@ class TypeNode: ASTNode {
 		let	canonicalTypeNode:TypeNode
 		let	declarationCursorLinkNode:CursorLinkNode
 		
+		///	Array or vectors.
+		let	elementTypeNode:TypeNode
+		let	arrayElementTypeNode:TypeNode
+		
+		
 		///	For function-like types. 
 		let	resultTypeNode:TypeNode?
 		let	argumentTypeNodes:[TypeNode]?
@@ -223,12 +228,17 @@ class TypeNode: ASTNode {
 		///	For point/reference types.
 		let	pointeeTypeNode:TypeNode?
 		
-			
 		init(_ data:Type) {
 			let	invalid	=	data.kind == TypeKind.Invalid
 			
+			func numberExpr(n:Int?) -> String {
+				return	n == nil ? "????" : "\(n!)"
+			}
+			
 			canonicalTypeNode			=	TypeNode(data.canonicalType, "[T] canonicalType")
 			declarationCursorLinkNode	=	CursorLinkNode(data.declaration, "[@C] declaration")
+			elementTypeNode				=	TypeNode(data.elementType, "elementType x \(numberExpr(data.numberOfElements))")
+			arrayElementTypeNode		=	TypeNode(data.arrayElementType, "arrayElementType x \(numberExpr(data.arraySize))")
 			
 			if data.kind == TypeKind.Invalid {
 				return
@@ -256,6 +266,7 @@ class TypeNode: ASTNode {
 			if data.kind == TypeKind.RValueReference {
 				pointeeTypeNode	=	TypeNode(data.pointeeType, "[T] pointeeType")
 			}
+			
 		}
 	}
 	override func textForField(f: ASTNodeField) -> String {
@@ -419,6 +430,8 @@ extension TypeNode: ASTNodeNavigation {
 			if let n = lazyData.pointeeTypeNode {
 				ns.append(n)
 			}
+			ns.append(lazyData.elementTypeNode)
+			ns.append(lazyData.arrayElementTypeNode)
 			return	ns
 		}
 	}

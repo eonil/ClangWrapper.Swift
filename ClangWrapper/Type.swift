@@ -64,11 +64,62 @@ public struct Type: Equatable {
 			return	(0..<n).map(argtype)
 		}
 	}
+	
+	
+	public var isFunctionTypeVariadic:Bool {
+		get {
+			return	clang_isFunctionTypeVariadic(raw) == 1
+		}
+	}
 	public var isPODType:Bool {
 		get {
 			return	clang_isPODType(raw) != 0
 		}
 	}
+	
+	
+	///	Return the number of elements of an array or vector type.
+	///	If a type is passed in that is not an array or vector type, -1 is returned.
+	///
+	///	Wrapper: Returns `nil` instead of `-1`.
+	public var numberOfElements:Int? {
+		get {
+			let	r	=	clang_getNumElements(raw)
+			if r == -1 {
+				return	nil
+			}
+			return	Int(r)
+		}
+	}
+	public var elementType:Type {
+		get {
+			return	Type(index: index, raw: clang_getElementType(raw))
+		}
+	}
+	public var arrayElementType:Type {
+		get {
+			return	Type(index: index, raw: clang_getArrayElementType(raw))
+		}
+	}
+	
+	///	Return the array size of a constant array.
+	///	If a non-array type is passed in, -1 is returned.
+	///
+	///	Wrapper: Returns `nil` instead of `-1`.
+	public var arraySize:Int? {
+		get {
+			let	r	=	clang_getArraySize(raw)
+			if r == -1 { return nil }
+			return	Int(r)
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 	public var isConstQualifiedType:Bool {
 		get {
 			return	clang_isConstQualifiedType(raw) != 0
