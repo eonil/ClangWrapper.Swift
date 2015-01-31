@@ -71,6 +71,7 @@ public struct Type: Equatable {
 			return	clang_isFunctionTypeVariadic(raw) == 1
 		}
 	}
+	///	Return `true` if the CXType is a POD (plain old data) type, and `false` otherwise.
 	public var isPODType:Bool {
 		get {
 			return	clang_isPODType(raw) != 0
@@ -119,20 +120,22 @@ public struct Type: Equatable {
 	
 	
 	
-	
+	///	Determine whether a CXType has the "const" qualifier set, without looking through typedefs that may have added "const" at a different level.
 	public var isConstQualifiedType:Bool {
 		get {
 			return	clang_isConstQualifiedType(raw) != 0
 		}
 	}
+	///	Determine whether a CXType has the "volatile" qualifier set, without looking through typedefs that may have added "volatile" at a different level.
 	public var isVolatileQualifiedType:Bool {
 		get {
-			return	clang_isConstQualifiedType(raw) != 0
+			return	clang_isVolatileQualifiedType(raw) != 0
 		}
 	}
+	///	Determine whether a CXType has the "restrict" qualifier set, without looking through typedefs that may have added "restrict" at a different level.
 	public var isRestrictQualifiedType:Bool {
 		get {
-			return	clang_isConstQualifiedType(raw) != 0
+			return	clang_isRestrictQualifiedType(raw) != 0
 		}
 	}
 	public var CXXRefQualifier:RefQualifierKind {
