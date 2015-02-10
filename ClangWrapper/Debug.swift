@@ -8,6 +8,6 @@
 
 
 
-func debugLog<T>(v:@autoclosure()->T) {
+func debugLog<T>(@autoclosure v:()->T) {
 	println("\(v())")
 }

@@ -18,7 +18,7 @@ public struct Type: Equatable {
 	}
 	public var kind:TypeKind {
 		get {
-			return	TypeKind(raw: raw.kind)
+			return	TypeKind.fromRaw(raw: raw.kind)
 		}
 	}
 	
@@ -140,7 +140,7 @@ public struct Type: Equatable {
 	}
 	public var CXXRefQualifier:RefQualifierKind {
 		get {
-			return	RefQualifierKind(raw: clang_Type_getCXXRefQualifier(raw))
+			return	RefQualifierKind.fromRaw(raw: clang_Type_getCXXRefQualifier(raw))
 		}
 	}
 	

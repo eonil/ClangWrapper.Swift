@@ -122,10 +122,10 @@ class CursorNode: ASTNode {
 	struct LazyData {
 		let	typeNode:TypeNode
 		let	typedefDeclarationUnderlyingTypeNode:TypeNode
-		let	childCursorNodes:[CursorNode]		=	[]
+		let	childCursorNodes:[CursorNode]
 		
 		let	resultTypeNode:TypeNode?
-		let	argumentCursorNodes:[CursorNode]	=	[]
+		let	argumentCursorNodes:[CursorNode]
 		
 		init(_ data:Cursor) {			
 			self.typeNode								=	TypeNode(data.type, "[T] type")
@@ -141,21 +141,27 @@ class CursorNode: ASTNode {
 					return	ChildVisitResult.Recurse
 				}))
 			}
+			var	a1	=	[] as [CursorNode]
 			for i in 0..<data.children.count {
 				let	c1		=	data.children[i]
 				let	cn1		=	CursorNode(c1, "[C] \(c1.spelling)")
 //				cn1.name	=	"children[\(i)] \(c1.spelling)"
-				childCursorNodes.append(cn1)
+				a1.append(cn1)
 			}
+			childCursorNodes	=	a1
 			
+			var	a2	=	[] as [CursorNode]
 			if data.kind == CursorKind.FunctionDecl || data.kind == CursorKind.CXXMethod {
-				resultTypeNode			=	TypeNode(data.resultType, "resultType")
+				resultTypeNode	=	TypeNode(data.resultType, "resultType")
 				for i in 0..<data.argumentCursors.count {
 					let	c	=	data.argumentCursors[i]
 					let	n	=	CursorNode(c, "argument[\(i)]")
-					argumentCursorNodes.append(n)
+					a2.append(n)
 				}
+			} else {
+				resultTypeNode	=	nil
 			}
+			argumentCursorNodes	=	a2
 			
 //			if data.kind == CursorKind.FunctionDecl || data.kind == CursorKind.CXXMethod {
 //				for i in 0..<data.argumentCursors.count {
@@ -164,6 +170,7 @@ class CursorNode: ASTNode {
 //					argumentCursorNodes.append(cn1)
 //				}
 //			}
+			
 		}
 	}
 	
@@ -241,32 +248,54 @@ class TypeNode: ASTNode {
 			arrayElementTypeNode		=	TypeNode(data.arrayElementType, "arrayElementType x \(numberExpr(data.arraySize))")
 			
 			if data.kind == TypeKind.Invalid {
+				resultTypeNode		=	nil
+				argumentTypeNodes	=	nil
+				pointeeTypeNode		=	nil
 				return
 			}
 			
 			////
 			
-//			if data.kind == TypeKind.FunctionProto || data.kind == TypeKind.FunctionNoProto || data.kind == TypeKind.Unexposed {
-				resultTypeNode		=	TypeNode(data.resultType, "[T] resultType")
+			resultTypeNode		=	TypeNode(data.resultType, "[T] resultType")
+			
+			argumentTypeNodes	=	{
 				if let args = data.argumentTypes {
-					argumentTypeNodes	=	[]
-					for i in 0..<args.count {
+					return	(0..<args.count).map { i in
 						let	t	=	args[i]
-						argumentTypeNodes!.append(TypeNode(t,"[T] argumentTypes[\(i)]"))
+						return	TypeNode(t,"[T] argumentTypes[\(i)]")
 					}
+				} else {
+					return	nil
 				}
-//			}
+			}()
+////			if data.kind == TypeKind.FunctionProto || data.kind == TypeKind.FunctionNoProto || data.kind == TypeKind.Unexposed {
+//				resultTypeNode		=	TypeNode(data.resultType, "[T] resultType")
+//				if let args = data.argumentTypes {
+//					argumentTypeNodes	=	(0..<args.count).map { i in
+//						let	t	=	args[i]
+//						return	TypeNode(t,"[T] argumentTypes[\(i)]")
+//					}
+////					argumentTypeNodes	=	[]
+////					for i in 0..<args.count {
+////						let	t	=	args[i]
+////						argumentTypeNodes!.append(TypeNode(t,"[T] argumentTypes[\(i)]"))
+////					}
+//				}
+////			}
 			
-			if data.kind == TypeKind.Pointer {
-				pointeeTypeNode	=	TypeNode(data.pointeeType, "[T] pointeeType")
-			}
-			if data.kind == TypeKind.LValueReference {
-				pointeeTypeNode	=	TypeNode(data.pointeeType, "[T] pointeeType")
-			}
-			if data.kind == TypeKind.RValueReference {
-				pointeeTypeNode	=	TypeNode(data.pointeeType, "[T] pointeeType")
-			}
 			
+			pointeeTypeNode	=	{
+				if data.kind == TypeKind.Pointer {
+					return	TypeNode(data.pointeeType, "[T] pointeeType")
+				}
+				if data.kind == TypeKind.LValueReference {
+					return	TypeNode(data.pointeeType, "[T] pointeeType")
+				}
+				if data.kind == TypeKind.RValueReference {
+					return	TypeNode(data.pointeeType, "[T] pointeeType")
+				}
+				return	nil
+			}()
 		}
 	}
 	override func textForField(f: ASTNodeField) -> String {
@@ -359,8 +388,8 @@ class CursorLinkNode: ASTNode {
 
 
 
-@objc
-protocol ASTNodeNavigation {
+
+protocol ASTNodeNavigation: AnyObject {
 	var	name:String { get }
 	var	description:String { get }
 	var	allChildNodes:[ASTNodeNavigation] { get }
@@ -373,7 +402,7 @@ extension ASTRootNode: ASTNodeNavigation {
 	}
 	var	allChildNodes:[ASTNodeNavigation] {
 		get {
-			return	translationUnitChildNodes
+			return	translationUnitChildNodes.map({ a in a as ASTNodeNavigation })
 		}
 	}
 }
@@ -400,11 +429,19 @@ extension CursorNode: ASTNodeNavigation {
 			var	a	=	[] as [ASTNodeNavigation]
 			a.append(lazyData.typeNode)
 			a.append(lazyData.typedefDeclarationUnderlyingTypeNode)
-			lazyData.childCursorNodes.map(a.append)
+			//	Doesn't work in Swift 1.2.
+//			lazyData.childCursorNodes.map({ x in a.append(x as ASTNodeNavigation) })
+			for x in lazyData.childCursorNodes {
+				a.append(x)
+			}
 			if let n = lazyData.resultTypeNode {
 				a.append(n)
 			}
-			lazyData.argumentCursorNodes.map(a.append)
+			for x in lazyData.argumentCursorNodes {
+				a.append(x)
+			}
+			//	Doesn't work in Swift 1.2.
+//			lazyData.argumentCursorNodes.map(a.append)
 			return	a
 		}
 	}
@@ -425,7 +462,11 @@ extension TypeNode: ASTNodeNavigation {
 				ns.append(n)
 			}
 			if let ns1 = lazyData.argumentTypeNodes {
-				ns.extend(ns1 as [ASTNodeNavigation])
+				//	Doesn't work in Swift 1.2.
+//				ns.extend(ns1 as [ASTNodeNavigation])
+				for x in ns1 {
+					ns.append(x)
+				}
 			}
 			if let n = lazyData.pointeeTypeNode {
 				ns.append(n)

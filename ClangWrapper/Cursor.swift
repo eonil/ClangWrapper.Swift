@@ -45,7 +45,7 @@ public struct Cursor {
 	public var kind:CursorKind {
 		get {
 			let	r	=	clang_getCursorKind(raw)
-			return	CursorKind(raw: r)
+			return	CursorKind.fromRaw(raw: r)
 		}
 	}
 	

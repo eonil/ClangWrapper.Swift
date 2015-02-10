@@ -16,7 +16,7 @@
 		4514409B1A6F38F700242EA3 /* Sample.c in Resources */ = {isa = PBXBuildFile; fileRef = 4514409A1A6F38F700242EA3 /* Sample.c */; };
 		451EB48F1A723C59002E7E77 /* Cursor+CPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EB48E1A723C59002E7E77 /* Cursor+CPP.swift */; };
 		452D032E1A6E9CB900F88F4E /* BuildSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03271A6E9CB900F88F4E /* BuildSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		452D032F1A6E9CB900F88F4E /* CXCompilationDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452D032F1A6E9CB900F88F4E /* CXCompilationDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */; };
 		452D03301A6E9CB900F88F4E /* CXErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D03291A6E9CB900F88F4E /* CXErrorCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D03311A6E9CB900F88F4E /* CXString.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032A1A6E9CB900F88F4E /* CXString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452D03321A6E9CB900F88F4E /* Documentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D032B1A6E9CB900F88F4E /* Documentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -282,8 +282,8 @@
 		452D03261A6E9CB900F88F4E /* clang-c */ = {
 			isa = PBXGroup;
 			children = (
+				45E57EF31A89D95600EF46AC /* (excluded) */,
 				452D03271A6E9CB900F88F4E /* BuildSystem.h */,
-				452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */,
 				452D03291A6E9CB900F88F4E /* CXErrorCode.h */,
 				452D032A1A6E9CB900F88F4E /* CXString.h */,
 				452D032B1A6E9CB900F88F4E /* Documentation.h */,
@@ -388,6 +388,14 @@
 				459E8F8A1A6E92A100EF8DCE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45E57EF31A89D95600EF46AC /* (excluded) */ = {
+			isa = PBXGroup;
+			children = (
+				452D03281A6E9CB900F88F4E /* CXCompilationDatabase.h */,
+			);
+			name = "(excluded)";
 			sourceTree = "<group>";
 		};
 		45F3CA6F1A73373300BD4352 /* ClangASTViewer */ = {

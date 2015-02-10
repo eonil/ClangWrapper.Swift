@@ -16,12 +16,12 @@ func aaa<T>(strings:[String], block:(UnsafePointer<UnsafePointer<Int8>>)->T) -> 
 	let	a	=	strings.map { (s:String) -> NSMutableData in
 		let	b	=	s.cStringUsingEncoding(NSUTF8StringEncoding)!
 		assert(b[b.endIndex-1] == 0)
-		return	NSData.fromCCharArray(b).mutableCopy() as NSMutableData
+		return	NSData.fromCCharArray(b).mutableCopy() as! NSMutableData
 	}
 	
 	let	a1	=	a.map { (d:NSMutableData) -> UnsafePointer<Int8> in
 		return	UnsafePointer<Int8>(d.mutableBytes)
-		} + [UnsafePointer<Int8>.null()]
+		} + [nil as UnsafePointer<Int8>]
 	
 	return	a1.withUnsafeBufferPointer { (p:UnsafeBufferPointer<UnsafePointer<Int8>>) -> T in
 		return	block(p.baseAddress)
@@ -41,12 +41,12 @@ func withCPointerToNullTerminatingCArrayOfCStrings(strings:[String], block:(Unsa
 	let	a	=	strings.map { (s:String) -> NSMutableData in
 		let	b	=	s.cStringUsingEncoding(NSUTF8StringEncoding)!
 		assert(b[b.endIndex-1] == 0)
-		return	NSData.fromCCharArray(b).mutableCopy() as NSMutableData
+		return	NSData.fromCCharArray(b).mutableCopy() as! NSMutableData
 	}
 	
 	let	a1	=	a.map { (d:NSMutableData) -> UnsafeMutablePointer<Int8> in
 		return	UnsafeMutablePointer<Int8>(d.mutableBytes)
-		} + [UnsafeMutablePointer<Int8>.null()]
+		} + [nil as UnsafeMutablePointer<Int8>]
 	
 	a1.withUnsafeBufferPointer { (p:UnsafeBufferPointer<UnsafeMutablePointer<Int8>>) -> () in
 		block(p.baseAddress)
@@ -70,7 +70,7 @@ private extension NSData {
 		return	bs
 	}
 	func toString() -> String {
-		return	NSString(data: self, encoding: NSUTF8StringEncoding)!
+		return	NSString(data: self, encoding: NSUTF8StringEncoding)! as String
 	}
 	class func fromUInt8Array(bs:[UInt8]) -> NSData {
 		var	r	=	nil as NSData?

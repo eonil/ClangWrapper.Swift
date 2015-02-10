@@ -8,4 +8,5 @@
 
 //#if	ClangWrapperBuildLocal
 #include "Index.h"
+//#include "CXCompilationDatabase.h"
 //#endif

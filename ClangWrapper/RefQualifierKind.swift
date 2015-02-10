@@ -20,6 +20,11 @@ public enum RefQualifierKind: UInt32 {
 }
 
 extension RefQualifierKind {
+	static func fromRaw(raw r:CXRefQualifierKind) -> RefQualifierKind {
+		return	self(raw: r)
+	}
+	///	Doesn't work well in Swift 1.2.
+	///	Use `fromRaw` instead of.
 	init(raw: CXRefQualifierKind) {
 		switch raw.value {
 		case CXRefQualifier_None.value:		self	=	None

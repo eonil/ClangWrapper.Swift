@@ -24,7 +24,7 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 	
 	var	rootNodeRepresentation:ASTRootNode? {
 		get {
-			return	self.representedObject as ASTRootNode?
+			return	self.representedObject as! ASTRootNode?
 		}
 		set(v) {
 			self.representedObject	=	v
@@ -34,7 +34,7 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 	
 	var	outlineView:NSOutlineView {
 		get {
-			return	view as NSOutlineView
+			return	view as! NSOutlineView
 		}
 	}
 	override func loadView() {
@@ -86,7 +86,7 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 		}
 		if let m = item as? ASTNodeNavigation {
 			let	n	=	m.allChildNodes[index]
-			return	n
+			return	n 
 		}
 		fatalError()
 	}
@@ -96,7 +96,7 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 	func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
 		func getView() -> NSTableCellView {
 			if let v1:AnyObject = outlineView.makeViewWithIdentifier(tableColumn!.identifier, owner: nil) {
-				return	v1 as NSTableCellView
+				return	v1 as! NSTableCellView
 			}
 			
 			let	t	=	NSTextField()
@@ -123,7 +123,7 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 			let	col	=	Column(rawValue: tableColumn!.identifier)!
 			
 			if col == Column.Name {
-				return	(item as ASTNode).name
+				return	(item as! ASTNode).name
 			}
 			if let n = item as? ASTNode {
 				switch col {

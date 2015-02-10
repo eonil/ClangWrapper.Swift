@@ -13,7 +13,7 @@ public struct Token {
 	public var kind:TokenKind {
 		get {
 			let	r	=	clang_getTokenKind(raw)
-			return	TokenKind(raw: r)
+			return	TokenKind.fromRaw(raw: r)
 		}
 	}
 	public var spelling:String {

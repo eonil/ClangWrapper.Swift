@@ -152,7 +152,7 @@ class MainSplitViewControlelr: NSSplitViewController {
 class ScrollViewController: NSViewController {
 	var	scrollView:NSScrollView {
 		get {
-			return	view as NSScrollView
+			return	view as! NSScrollView
 		}
 	}
 	override func loadView() {

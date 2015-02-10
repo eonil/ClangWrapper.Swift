@@ -40,6 +40,12 @@ public enum TokenKind: UInt32 {
 }
 
 extension TokenKind {
+	static func fromRaw(raw r:CXTokenKind) -> TokenKind {
+		return	self(raw: r)
+	}
+	
+	///	Doesn't work well in Swift 1.2.
+	///	Use `fromRaw` instead of.
 	init(raw: CXTokenKind) {
 		switch raw.value {
 		case CXToken_Punctuation.value:

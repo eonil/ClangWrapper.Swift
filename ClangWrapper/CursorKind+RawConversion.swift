@@ -9,6 +9,12 @@
 
 
 extension CursorKind {
+	static func fromRaw(raw r:CXCursorKind) -> CursorKind {
+		return	self(raw: r)
+	}
+	
+	///	Doesn't work well in Swift 1.2. 
+	///	Use `fromRaw` instead of.
 	init(raw: CXCursorKind) {
 		self	=	fromRaw(raw)
 	}

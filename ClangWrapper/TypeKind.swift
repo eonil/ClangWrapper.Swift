@@ -93,6 +93,11 @@ public enum TypeKind: UInt32 {
 
 
 internal extension TypeKind {
+	static func fromRaw(raw r:CXTypeKind) -> TypeKind {
+		return	self(raw: r)
+	}
+	///	Doesn't work well in Swift 1.2.
+	///	Use `fromRaw` instead of.
 	init(raw: CXTypeKind) {
 		self	=	TypeKind(rawValue: raw.value)!
 	}
