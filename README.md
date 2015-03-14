@@ -73,7 +73,9 @@ Usually compiler needs more parameters to locate proper platform support. Here's
 
 
 
-
+Reuirements
+-----------
+-	Swift 1.2.
 
 
 

@@ -131,7 +131,6 @@
 		4505E5D71A6F25E600C555A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4505E5E21A6F25E600C555A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4505E5E31A6F25E600C555A6 /* WorkbenchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchTests.swift; sourceTree = "<group>"; };
-		4505E6041A6F269200C555A6 /* Workbench copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Workbench copy-Info.plist"; path = "/Users/Eonil/Workshop/Incubation/ClangWrapper/Workbench copy-Info.plist"; sourceTree = "<absolute>"; };
 		4514408A1A6F2A8F00242EA3 /* ChildVisitResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildVisitResult.swift; sourceTree = "<group>"; };
 		4514408C1A6F2D8C00242EA3 /* CursorKind+Stringification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CursorKind+Stringification.swift"; sourceTree = "<group>"; };
 		4514408E1A6F351100242EA3 /* Cursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cursor.swift; sourceTree = "<group>"; };
@@ -321,7 +320,6 @@
 				458260301A75F8450023FF07 /* (from Homebrew) */,
 				45F3CA6F1A73373300BD4352 /* ClangASTViewer */,
 				459E8F791A6E928100EF8DCE /* Products */,
-				4505E6041A6F269200C555A6 /* Workbench copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
