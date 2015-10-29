@@ -8,7 +8,7 @@
 
 
 
-extension SourceLocation: Printable {
+extension SourceLocation: CustomStringConvertible {
 	public var description:String {
 		get {
 			let	s	=	spelling
@@ -17,7 +17,7 @@ extension SourceLocation: Printable {
 	}
 }
 
-extension SourceRange: Printable {
+extension SourceRange: CustomStringConvertible {
 	public var description:String {
 		get {
 			return	"\(start)~\(end)"

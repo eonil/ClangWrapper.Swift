@@ -15,7 +15,7 @@ public enum CXXAccessSpecifier {
 	case Private
 }
 
-extension CXXAccessSpecifier: Printable {
+extension CXXAccessSpecifier: CustomStringConvertible {
 	public var description:String {
 		get {
 			switch self {
@@ -48,11 +48,11 @@ internal extension CXXAccessSpecifier {
 
 
 private func select(v:CX_CXXAccessSpecifier) -> CXXAccessSpecifier {
-	switch v.value {
-	case CX_CXXInvalidAccessSpecifier.value:		return	CXXAccessSpecifier.InvalidAccessSpecifier
-	case CX_CXXPublic.value:						return	CXXAccessSpecifier.Public
-	case CX_CXXProtected.value:						return	CXXAccessSpecifier.Protected
-	case CX_CXXPrivate.value:						return	CXXAccessSpecifier.Private
+	switch v.rawValue {
+	case CX_CXXInvalidAccessSpecifier.rawValue:		return	CXXAccessSpecifier.InvalidAccessSpecifier
+	case CX_CXXPublic.rawValue:						return	CXXAccessSpecifier.Public
+	case CX_CXXProtected.rawValue:						return	CXXAccessSpecifier.Protected
+	case CX_CXXPrivate.rawValue:						return	CXXAccessSpecifier.Private
 	default:
 		fatalError("Unknown value for `CX_CXXAccessSpecifier` enum.")
 	}

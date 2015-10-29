@@ -36,7 +36,7 @@ func aaa<T>(strings:[String], block:(UnsafePointer<UnsafePointer<Int8>>)->T) -> 
 ///
 ///	Generates proper pointer arrays for `exec~` family calls.
 ///	Terminatin `NULL` is required for `exec~` family calls.
-func withCPointerToNullTerminatingCArrayOfCStrings(strings:[String], block:(UnsafePointer<UnsafeMutablePointer<Int8>>)->()) {
+func withCPointerToNullTerminatingCArrayOfCStrings(strings:[String], _ block:(UnsafePointer<UnsafeMutablePointer<Int8>>)->()) {
 	///	Keep this in memory until the `block` to be finished.
 	let	a	=	strings.map { (s:String) -> NSMutableData in
 		let	b	=	s.cStringUsingEncoding(NSUTF8StringEncoding)!

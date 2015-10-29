@@ -30,9 +30,9 @@ public struct TokenSequence: SequenceType {
 			return	Token(sequence: self, index: index)
 		}
 	}
-	public func generate() -> GeneratorOf<Token> {
+	public func generate() -> AnyGenerator<Token> {
 		var	i	=	0
-		return	GeneratorOf { rawtk in
+		return	anyGenerator { 
 			if i == Int(self.rawcount) {
 				return	nil
 			} else {

@@ -12,7 +12,7 @@ public struct Type: Equatable {
 	public var spelling:String {
 		get {
 			let	s	=	clang_getTypeSpelling(raw)
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1!
 		}
 	}
@@ -162,7 +162,7 @@ public func ==(left:Type, right:Type) -> Bool {
 
 
 
-extension Type: Printable {
+extension Type: CustomStringConvertible {
 	public var description:String {
 		get {
 			//	TODO:

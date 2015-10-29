@@ -8,7 +8,7 @@
 
 
 
-extension TranslationUnit: Printable {
+extension TranslationUnit: CustomStringConvertible {
 	public var description:String {
 		get {
 			var	s	=	""
@@ -26,8 +26,8 @@ extension TranslationUnit: Printable {
 
 
 
-private func runOverChildrenOf<O:OutputStreamType>(c:Cursor, depth:Int, inout s:O) {
-	let	indent	=	join("", Repeat(count: depth, repeatedValue: "  "))
+private func runOverChildrenOf<O:OutputStreamType>(c:Cursor, _ depth:Int, inout _ s:O) {
+	let	indent	=	Repeat(count: depth, repeatedValue: "  ").joinWithSeparator("")
 	let	desc	=	c.description
 	s.write("\(indent)\(desc)")
 	s.write("\n")

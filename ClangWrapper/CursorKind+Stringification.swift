@@ -9,11 +9,11 @@
 
 
 
-extension CursorKind: Printable {
+extension CursorKind: CustomStringConvertible {
 	public var description:String {
 		get{
 			let	a	=	[firstNameOf(self)] + aliasesOf(self)
-			let	s	=	join("/", a)
+			let	s	=	a.joinWithSeparator("/")
 			return	s
 		}
 	}

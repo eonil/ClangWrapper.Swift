@@ -81,7 +81,8 @@ class TranslationUnitNode: ASTNode {
 		cursorNode				=	CursorNode(translationUnitData.cursor, "[C] cursor")
 		
 		super.init()
-		self.name	=	"[U] \(translationUnitData.cursor.spelling.lastPathComponent)"
+		let	u	=	NSURL.fileURLWithPath(translationUnitData.cursor.spelling)
+		self.name	=	"[U] \(u.lastPathComponent)"
 	}
 }
 
@@ -134,10 +135,10 @@ class CursorNode: ASTNode {
 			////
 			
 			if data.spelling == "ReadRawData" {
-				println(data.sourceCode)
-				println(data.children.count)
-				println(data.visitChildrenWithBlock({ (cursor, parent) -> ChildVisitResult in
-					println(cursor)
+				print(data.sourceCode)
+				print(data.children.count)
+				print(data.visitChildrenWithBlock({ (cursor, parent) -> ChildVisitResult in
+					print(cursor)
 					return	ChildVisitResult.Recurse
 				}))
 			}

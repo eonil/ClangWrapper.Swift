@@ -41,25 +41,25 @@ public enum TokenKind: UInt32 {
 
 extension TokenKind {
 	static func fromRaw(raw r:CXTokenKind) -> TokenKind {
-		return	self(raw: r)
+		return	self.init(raw: r)
 	}
 	
 	///	Doesn't work well in Swift 1.2.
 	///	Use `fromRaw` instead of.
 	init(raw: CXTokenKind) {
-		switch raw.value {
-		case CXToken_Punctuation.value:
+		switch raw.rawValue {
+		case CXToken_Punctuation.rawValue:
 			self	=	Punctuation
-		case CXToken_Keyword.value:
+		case CXToken_Keyword.rawValue:
 			self	=	Keyword
-		case CXToken_Identifier.value:
+		case CXToken_Identifier.rawValue:
 			self	=	Identifier
-		case CXToken_Literal.value:
+		case CXToken_Literal.rawValue:
 			self	=	Literal
-		case CXToken_Comment.value:
+		case CXToken_Comment.rawValue:
 			self	=	Comment
 		default:
-			fatalError("Unknown token-kind constant value: \(raw.value)")
+			fatalError("Unknown token-kind constant value: \(raw.rawValue)")
 		}
 	}
 	var raw:CXTokenKind {

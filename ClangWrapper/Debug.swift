@@ -9,5 +9,5 @@
 
 
 func debugLog<T>(@autoclosure v:()->T) {
-	println("\(v())")
+	print("\(v())")
 }

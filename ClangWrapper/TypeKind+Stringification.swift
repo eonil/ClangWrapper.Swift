@@ -10,11 +10,11 @@
 
 
 
-extension TypeKind: Printable {
+extension TypeKind: CustomStringConvertible {
 	public var description:String {
 		get {
 			let	a	=	[firstNameOf(self)] + aliasesOf(self)
-			return	join("/", a)
+			return	a.joinWithSeparator("/")
 		}
 	}
 }

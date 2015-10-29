@@ -8,7 +8,7 @@
 
 
 
-extension Cursor: Printable {
+extension Cursor: CustomStringConvertible {
 	public var description:String {
 		get {
 			let	extras	=	getExtras(self)

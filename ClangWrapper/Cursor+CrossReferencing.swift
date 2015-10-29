@@ -12,7 +12,7 @@ public extension Cursor {
 	public var spelling:String {
 		get {
 			let	s	=	clang_getCursorSpelling(raw)
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1!
 		}
 	}
@@ -21,7 +21,7 @@ public extension Cursor {
 	public var displayName:String? {
 		get {
 			let	s	=	clang_getCursorDisplayName(raw)
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1
 		}
 	}
@@ -66,14 +66,14 @@ public extension Cursor {
 	public var rawCommentText:String? {
 		get {
 			let	s	=	clang_Cursor_getRawCommentText(raw)
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1
 		}
 	}
 	public var briefCommentText:String? {
 		get {
 			let	s	=	clang_Cursor_getBriefCommentText(raw)
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1
 		}
 	}

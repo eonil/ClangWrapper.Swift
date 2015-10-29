@@ -64,7 +64,7 @@ Usually compiler needs more parameters to locate proper platform support. Here's
 		"-x", "c++",
 		"-std=c++11",
 		"-stdlib=libc++",
-		"-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk",
+		"-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk",
 		"-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 	]
 
@@ -75,7 +75,9 @@ Usually compiler needs more parameters to locate proper platform support. Here's
 
 Reuirements
 -----------
--	Swift 1.2.
+-	OS X 10.11 El Capitan
+-	Xcode 7.1
+-	Swift 2.1
 
 
 

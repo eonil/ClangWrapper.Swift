@@ -19,7 +19,7 @@ public struct Token {
 	public var spelling:String {
 		get {
 			let	s	=	clang_getTokenSpelling(sequence.rawtu, raw)
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1!
 		}
 	}

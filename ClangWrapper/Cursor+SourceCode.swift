@@ -18,12 +18,12 @@ public extension Cursor {
 	}
 }
 
-private func stringOfRange(unit:TranslationUnit, range:SourceRange) -> String {
+private func stringOfRange(unit:TranslationUnit, _ range:SourceRange) -> String {
 	var	a		=	[] as [String]
 	let	tkseq	=	unit.tokenize(range)
 	for tk in tkseq {
 		a.append(tk.spelling)
 	}
-	return	join(" ", a)
+	return	a.joinWithSeparator(" ")
 }
 

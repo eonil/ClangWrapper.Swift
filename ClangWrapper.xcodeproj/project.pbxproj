@@ -151,7 +151,7 @@
 		452D038B1A6EAB5000F88F4E /* CursorKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorKind.swift; sourceTree = "<group>"; };
 		452D038D1A6EAC6C00F88F4E /* CursorKind+Aliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CursorKind+Aliases.swift"; sourceTree = "<group>"; };
 		452D03911A6EB12A00F88F4E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		452D03931A6EB26900F88F4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		452D03931A6EB26900F88F4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; tabWidth = 4; };
 		45494C2E1A6F51CA00859DDF /* Sample2.h */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = Sample2.h; sourceTree = "<group>"; };
 		45494C371A6F5CB300859DDF /* CXXAccessSpecifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXXAccessSpecifier.swift; sourceTree = "<group>"; };
 		454C79E11A76334600AA966C /* Cursor+TypeInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cursor+TypeInformation.swift"; sourceTree = "<group>"; };
@@ -502,6 +502,7 @@
 		459E8F701A6E928100EF8DCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Eonil;
 				TargetAttributes = {

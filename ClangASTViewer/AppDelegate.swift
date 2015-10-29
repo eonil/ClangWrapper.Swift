@@ -28,13 +28,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			"-x", "c++",
 			"-std=c++11",
 			"-stdlib=libc++",
-			"-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk",
+			"-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk",
 			"-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 			"-F\(p)",
 		]
 		let	tu		=	self.idx.parseTranslationUnit(p1, commandLineArguments: args)
 		
-		println(tu.diagnostics)
+		print(tu.diagnostics)
 		precondition(tu.diagnostics.count == 0)
 		
 		////

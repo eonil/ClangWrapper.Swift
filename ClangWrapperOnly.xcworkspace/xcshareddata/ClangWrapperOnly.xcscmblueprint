@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8FCE9684CD523B6697D2B9630EF1DB032F46FA7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8FCE9684CD523B6697D2B9630EF1DB032F46FA7C" : 0,
+    "9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2F514E6E-040E-4B65-963C-21E42F25F159",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8FCE9684CD523B6697D2B9630EF1DB032F46FA7C" : "ClangWrapper",
+    "9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B" : "Unix\/homebrew"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ClangWrapperOnly",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ClangWrapperOnly.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Eonil\/ClangWrapper.Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8FCE9684CD523B6697D2B9630EF1DB032F46FA7C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Homebrew\/homebrew.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9B76F7F7455EC6A07EA1AD0D4AAF24D2E732CD1B"
+    }
+  ]
+}

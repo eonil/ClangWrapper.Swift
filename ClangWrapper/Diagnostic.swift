@@ -25,7 +25,7 @@ public struct Diagnostic: TrackableRemoteObjectProxy {
 	public var spelling:String {
 		get {
 			let	s	=	clang_getDiagnosticSpelling(raw);
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1!
 		}
 	}
@@ -43,7 +43,7 @@ public struct Diagnostic: TrackableRemoteObjectProxy {
 	}
 }
 
-extension Diagnostic: Printable {
+extension Diagnostic: CustomStringConvertible {
 	public var description:String {
 		get {
 		return	spelling

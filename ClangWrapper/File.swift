@@ -14,7 +14,7 @@ public struct File {
 	public var name:String {
 		get {
 			let	s	=	clang_getFileName(raw);
-			let	s1	=	toSwiftString(s, true)
+			let	s1	=	toSwiftString(s, disposeCXString: true)
 			return	s1!
 		}
 	}

@@ -40,14 +40,14 @@ public enum ChildVisitResult: UInt32 {
 
 internal extension ChildVisitResult {
 	init(raw: CXChildVisitResult) {
-		switch raw.value {
-		case CXChildVisit_Break.value:
+		switch raw.rawValue {
+		case CXChildVisit_Break.rawValue:
 			self	=	Break
 			
-		case CXChildVisit_Continue.value:
+		case CXChildVisit_Continue.rawValue:
 			self	=	Continue
 			
-		case CXChildVisit_Recurse.value:
+		case CXChildVisit_Recurse.rawValue:
 			self	=	Recurse
 			
 		default:

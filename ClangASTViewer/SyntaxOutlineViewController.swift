@@ -45,7 +45,7 @@ class SyntaxOutlineViewController: NSViewController, NSOutlineViewDataSource, NS
 		self.outlineView.setDataSource(self)
 		self.outlineView.setDelegate(self)
 		
-		func makeColumn(id:Column, title:String) -> NSTableColumn {
+		func makeColumn(id:Column, _ title:String) -> NSTableColumn {
 			let	c	=	NSTableColumn()
 			c.identifier	=	id.rawValue
 			c.title			=	title
