@@ -73,7 +73,7 @@ Usually compiler needs more parameters to locate proper platform support. Here's
 
 
 
-Reuirements
+Requirements
 -----------
 -	OS X 10.11 El Capitan
 -	Xcode 7.1
